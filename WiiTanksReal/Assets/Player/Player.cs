@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, Damageable
 {
+    public float health;
 
     public float speed;
     public Transform spawnPoint;
@@ -14,36 +15,39 @@ public class Player : MonoBehaviour
     private Vector3 moveDir = Vector3.zero;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
+        //this gets the character controller that is attached to this object
         controller = GetComponent<CharacterController>();
+        //this gets the rigid body from the object
         rigid = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //this shoots the bullet
         if (Input.GetButtonDown("Fire1"))
         {
+            //this creates a new object of bullet at the certain position and rotation
             Instantiate(bulletType, spawnPoint.position, spawnPoint.rotation);
         }
 
+        //this gets the input from WASD as a double from 0.0 to 1.0 and makes a vector
         moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //this makes the moveDir vector relative to the actor so that it moves the actor in the right direction
         moveDir = transform.TransformDirection(moveDir);
-        moveDir *= speed;
-        controller.Move(moveDir * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Debug.Log("Going up");
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Debug.Log("Going down");
-        }
-        {
-
-        }
+        //this actually moves the player by moving in the moveDir * the time between each frame so that 
+        //its consistant no matter what the frame rate is 
+        controller.Move(moveDir * Time.deltaTime * speed);
     }
+
+    //this is called when ever the tank is damaged
+    public void damage(float damage, GameObject other)
+    {
+        health -= damage;
+        print("Health is: " + health);
+    }
+
 }
