@@ -12,6 +12,7 @@ public class Player : MonoBehaviour, Damageable
 
     private CharacterController controller;
     private Rigidbody rigid;
+    public Transform bodyTransform;
     private Vector3 moveDir = Vector3.zero;
 
 
@@ -34,13 +35,29 @@ public class Player : MonoBehaviour, Damageable
             Instantiate(bulletType, spawnPoint.position, spawnPoint.rotation);
         }
 
+        moveTank();
+        turnTank();
+
+
+    }
+
+    //moves tank
+    void moveTank()
+    {
         //this gets the input from WASD as a double from 0.0 to 1.0 and makes a vector
         moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         //this makes the moveDir vector relative to the actor so that it moves the actor in the right direction
         moveDir = transform.TransformDirection(moveDir);
-        //this actually moves the player by moving in the moveDir * the time between each frame so that 
-        //its consistant no matter what the frame rate is 
+        /*
+         * this actually moves the player by moving in the moveDir * the time between each frame so that 
+         * its consistant no matter what the frame rate is 
+        */
         controller.Move(moveDir * Time.deltaTime * speed);
+    }
+    //turns tank
+    void turnTank()
+    {
+
     }
 
     //this is called when ever the tank is damaged
