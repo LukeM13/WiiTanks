@@ -54,10 +54,23 @@ public class Player : MonoBehaviour, Damageable
         */
         controller.Move(moveDir * Time.deltaTime * speed);
     }
+
     //turns tank
     void turnTank()
-    {
+    { 
+
         //figure out how to do this
+        if (moveDir.z > 0)
+        {
+            bodyTransform.rotation = new Quaternion(0, Mathf.LerpAngle(bodyTransform.rotation.y, 0, moveDir.z), 0, bodyTransform.rotation.w);
+
+
+        }
+        if(moveDir.x > 0)
+        {
+            bodyTransform.rotation = new Quaternion(0, Mathf.LerpAngle(bodyTransform.rotation.y, 90, moveDir.x), 0, bodyTransform.rotation.w);
+        }
+
     }
 
     //this is called when ever the tank is damaged
