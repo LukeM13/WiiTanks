@@ -71,6 +71,7 @@ public class Player : MonoBehaviour, Damageable
     //turns tank
     void turnTank()
     {
+        //all these get the direction of movement and get an angle from it
         if (horzValue > 0 && vertValue > 0)
         {
             angle = 45;
@@ -104,6 +105,7 @@ public class Player : MonoBehaviour, Damageable
             angle = 180;
         }
 
+        //this rotates the player to that angle
         if (Mathf.Abs(vertValue) > 0)
         {
             //print(angle);
@@ -123,6 +125,7 @@ public class Player : MonoBehaviour, Damageable
         print("Health is: " + health);
     }
 
+    //this gets the closest angle to the angle we want so the tank doesnt rotate all the way around 
     private float getClosestAngle(float currentAngle, float wantedAngle)
     {
         if (wantedAngle >= 180)
@@ -149,32 +152,6 @@ public class Player : MonoBehaviour, Damageable
         }
 
 
-    }
-
-    private int getQuad(float angle)
-    {
-        while (angle < 0)
-        {
-            angle += 360;
-        }
-
-        if (angle >= 0 && angle < 90)
-        {
-            return 1;
-        }
-        else if (angle >= 90 && angle < 180)
-        {
-            return 2;
-        }
-        else if (angle >= 180 && angle < 270)
-        {
-            return 3;
-        }
-        else if (angle >= 270 && (angle < 360 || angle == 0))
-        {
-            return 4; 
-        }
-        return -1;
     }
 
 }

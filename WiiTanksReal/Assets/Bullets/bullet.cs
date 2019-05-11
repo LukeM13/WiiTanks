@@ -48,7 +48,7 @@ public class bullet : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         //checks to see if we hit a wall
-        if (col.gameObject.tag == "Wall")
+        if (col.gameObject.tag.Equals("Wall"))
         {
             //if we hit a damage able wall we want to damage the wall and destroy the bullet
 
@@ -73,7 +73,7 @@ public class bullet : MonoBehaviour
             numOfHits++;
         }
         //checks to see if we hit a tank
-        else if (col.gameObject.tag == "Tank")
+        else if (col.gameObject.tag.Equals("Tank"))
         {
             //same thing as the wall
             List<Damageable> damageScripts;
