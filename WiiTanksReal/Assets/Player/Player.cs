@@ -12,6 +12,7 @@ public class Player : MonoBehaviour, Damageable
 
     private CharacterController controller;
     private Rigidbody rigid;
+    private ParticleSystem turretSmoke;
     public Transform bodyTransform;
     private float vertValue = 0.0f;
     private float horzValue = 0.0f;
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour, Damageable
         controller = GetComponent<CharacterController>();
         //this gets the rigid body from the object
         rigid = GetComponent<Rigidbody>();
+        //this gets the turret smoke particle system on the turret object
+        turretSmoke = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,8 @@ public class Player : MonoBehaviour, Damageable
         {
             //this creates a new object of bullet at the certain position and rotation
             Instantiate(bulletType, spawnPoint.position, spawnPoint.rotation);
+            //play particle effect
+            turretSmoke.Play();
         }
 
         moveTank();
@@ -101,12 +106,12 @@ public class Player : MonoBehaviour, Damageable
 
         if (Mathf.Abs(vertValue) > 0)
         {
-            print(angle);
+            //print(angle);
             bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, angle), Mathf.Abs(vertValue)), 0);
         }
         else if (Mathf.Abs(horzValue) > 0)
         {
-            print(angle);
+            //print(angle);
             bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, angle), Mathf.Abs(horzValue)), 0);
         }
     }
