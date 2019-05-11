@@ -11,7 +11,8 @@ public class Basic_AI : MonoBehaviour, Damageable
     public ParticleSystem deathParticle;
     public Transform turretTransform;
     public float health;
-    private GameObject player;
+    private GameObject[] players;
+    private int activeIndex = -1;
 
 
     // Start is called before the first frame update
@@ -19,6 +20,8 @@ public class Basic_AI : MonoBehaviour, Damageable
     {
         //gets the navmeshagent
         navAgent = GetComponent<NavMeshAgent>();
+        //get all players in the world
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -39,9 +42,11 @@ public class Basic_AI : MonoBehaviour, Damageable
             print("finding new path");
         }
 
-        if (hasShotOnPlayer() != null)
+        activeIndex = findPlayer();
+
+        if (activeIndex != -1)
         {
-            print("can see player");
+            turretTransform.rotation = Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z));
         }
 
     }
@@ -61,26 +66,29 @@ public class Basic_AI : MonoBehaviour, Damageable
         }
     }
 
-    private GameObject hasShotOnPlayer()
+    private int findPlayer()
     {
         //get raycast results
         RaycastHit hit;
-        //get a list of players we have in the world
-        GameObject[] list = GameObject.FindGameObjectsWithTag("Player");
         //loop through them 
-        foreach (GameObject player in list) {
+        for(int i = 0; i < players.Length; i++) {
             //shoot a line to that player to see if we hit a wall before we hit the player, if so then we can't see the player and shouldn't aim at it
-            if (Physics.Raycast(transform.position, player.transform.position - transform.position, out hit, 10000))
+            if (Physics.Raycast(transform.position, players[i].transform.position - transform.position, out hit, 10000))
             {
-                Debug.DrawRay(transform.position, hit.point, Color.red);
-                if (gameObject.tag.Equals("Player"))
+                print("test1");
+                Debug.DrawLine(transform.position, hit.point, Color.red);
+                if (hit.collider.gameObject.tag.Equals("Player"))
                 {
-                    return player;
+                    return i;
                 }
+            } else
+            {
+                print("test");
+                Debug.DrawRay(transform.position, players[i].transform.position - transform.position, Color.red);
             }
 
         }
-        return null;
+        return -1;
     }
 
     private GameObject getClosestPlayer()
