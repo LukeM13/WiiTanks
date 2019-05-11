@@ -5227,7 +5227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd2345ab75aded468733a1899c817cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticle: {fileID: 0}
+  deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
+    type: 3}
+  turretTransform: {fileID: 75671205518906073}
   health: 1
 --- !u!195 &75671205565108631
 NavMeshAgent:
