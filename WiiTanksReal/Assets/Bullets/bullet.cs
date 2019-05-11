@@ -84,6 +84,16 @@ public class bullet : MonoBehaviour
                 damageObject.damage(damage, this.gameObject);
             }
             
+        } else if (col.gameObject.tag.Equals("Player"))
+        {
+            //same thing as the wall
+            List<Damageable> damageScripts;
+            GetInterfaces<Damageable>(out damageScripts, col.gameObject);
+            foreach (Damageable damageObject in damageScripts)
+            {
+                destroy = true;
+                damageObject.damage(damage, this.gameObject);
+            }
         }
     }
 

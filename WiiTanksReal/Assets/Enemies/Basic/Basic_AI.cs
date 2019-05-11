@@ -6,14 +6,31 @@ using UnityEditor;
 
 public class Basic_AI : MonoBehaviour, Damageable
 {
-
+    //this is used to move the player around and navigation in general
     private NavMeshAgent navAgent;
+    //the death particle that plays when killed
     public ParticleSystem deathParticle;
+    //the transform of the turret
     public Transform turretTransform;
     public float health;
+    //how fast the turret should snap to the player
+    public float snappingSpeed;
+    //the number of bullets that should be shot in one burst
+    public int burstAmount;
+    //the players in the game
     private GameObject[] players;
+    //this index of the player we can see
     private int activeIndex = -1;
-
+    //the timer for moving the turret
+    private float smoothTurret = 0;
+    //the time between each burst of bullets
+    public float burstTime;
+    //the timer for the bursts
+    private float currentBurstTime;
+    //the bullet that this tank shoot
+    public Object bullet;
+    //the spawn point for the bullets
+    public Transform spawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +63,23 @@ public class Basic_AI : MonoBehaviour, Damageable
 
         if (activeIndex != -1)
         {
-            turretTransform.rotation = Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z));
+            if (smoothTurret < 1)
+            {
+                smoothTurret += Time.deltaTime * snappingSpeed;
+            }
+            turretTransform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z)), smoothTurret);
+            if (currentBurstTime >= burstTime)
+            {
+                Instantiate(bullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                currentBurstTime = 0;
+            } else
+            {
+                currentBurstTime += Time.deltaTime;
+            }
+            
+        } else
+        {
+            smoothTurret = 0;
         }
 
     }

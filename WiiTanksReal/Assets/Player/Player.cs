@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour, Damageable
 {
     public float health;
+    public ParticleSystem deathParticle;
 
     public float speed;
     public Transform spawnPoint;
@@ -123,6 +124,12 @@ public class Player : MonoBehaviour, Damageable
     {
         health -= damage;
         print("Health is: " + health);
+        if (health <= 0)
+        {
+            Instantiate(deathParticle, transform.position, transform.rotation);
+            deathParticle.Play();
+            Destroy(gameObject);
+        }
     }
 
     //this gets the closest angle to the angle we want so the tank doesnt rotate all the way around 
