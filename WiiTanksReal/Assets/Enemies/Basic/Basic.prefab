@@ -58,9 +58,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75671203544150809}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0.6420001, z: 0}
+  m_LocalPosition: {x: 0, y: 0.962, z: 0}
   m_LocalScale: {x: 50.000046, y: 50.00003, z: 50.00003}
-  m_Children: []
+  m_Children:
+  - {fileID: 75671203962463399}
   m_Father: {fileID: 75671205518906073}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
@@ -132,13 +133,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75671203962463396}
-  m_LocalRotation: {x: 1, y: 0.00000028088027, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.6420003, z: -2.172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.00000019861236, y: -0.7071068, z: 0.7071068, w: 0.00000019861236}
+  m_LocalPosition: {x: 0, y: -0.043439977, z: 0}
+  m_LocalScale: {x: 0.019999992, y: 0.019999992, z: 0.019999992}
   m_Children:
   - {fileID: 75671204600742594}
-  m_Father: {fileID: 75671205518906073}
-  m_RootOrder: 1
+  m_Father: {fileID: 75671203544150808}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 179.99998}
 --- !u!1 &75671204600742595
 GameObject:
@@ -5051,7 +5052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75671205433630800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.332, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75671203456624166}
@@ -5163,7 +5164,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75671203544150808}
-  - {fileID: 75671203962463399}
   m_Father: {fileID: 75671205565108634}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5194,7 +5194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75671205565108635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.038, y: 0.403, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75671205433630803}
@@ -5213,8 +5213,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.96, y: 1.11, z: 2.8}
-  m_Center: {x: 0, y: 0.24, z: 0}
+  m_Size: {x: 1.96, y: 2, z: 2.8}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &75671205565108629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5231,8 +5231,9 @@ MonoBehaviour:
     type: 3}
   turretTransform: {fileID: 75671205518906073}
   health: 1
-  snappingSpeed: 0
-  burstAmount: 0
+  snappingSpeed: 1
+  burstAmount: 2
+  burstTime: 2
   bullet: {fileID: 7130490666581385568, guid: fc107d3e264f84ba9bf926b8b8ed9e01, type: 3}
   spawnPoint: {fileID: 75671203962463399}
 --- !u!195 &75671205565108631
@@ -5244,7 +5245,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 75671205565108635}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.58
+  m_Radius: 1.6
   m_Speed: 3.5
   m_Acceleration: 11.29
   avoidancePriority: 50
@@ -5253,7 +5254,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.94
-  m_BaseOffset: 0.37
+  m_Height: 1
+  m_BaseOffset: 0.09
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

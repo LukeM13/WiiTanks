@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1600695258537497666}
   - component: {fileID: 1600695258537497665}
   - component: {fileID: 1600695258537497679}
+  - component: {fileID: 1549077976220243102}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600695258537497668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.525, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4454017616904524116}
@@ -48,10 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  deathParticle: {fileID: 0}
   speed: 10
-  spawnPoint: {fileID: 613731546220627752}
-  bulletType: {fileID: 7130490666581385568, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-    type: 3}
   bodyTransform: {fileID: 0}
 --- !u!143 &1600695258537497665
 CharacterController:
@@ -70,7 +69,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!65 &1600695258537497679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82,8 +81,25 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.26, z: 2.86}
-  m_Center: {x: 0, y: 0.3, z: 0}
+  m_Size: {x: 1.93, y: 2, z: 2.86}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1549077976220243102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600695258537497668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2254422824094e44ebc380724fb771b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets: []
+  spawnPoint: {fileID: 613731546220627752}
+  testBullet: {fileID: 7130490666581385569, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+    type: 3}
+  activeBullet: 0
 --- !u!1 &1655467202285135617
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910067398629463101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7328588480792780732}
@@ -4994,7 +5010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6762402639289089655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.333, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6074843842489972519}

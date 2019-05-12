@@ -39,6 +39,7 @@ public class Basic_AI : MonoBehaviour, Damageable
         navAgent = GetComponent<NavMeshAgent>();
         //get all players in the world
         players = GameObject.FindGameObjectsWithTag("Player");
+
     }
 
     // Update is called once per frame
@@ -47,13 +48,13 @@ public class Basic_AI : MonoBehaviour, Damageable
         //this gets the distance that the nav agent has left to move on its path
         float dist = navAgent.remainingDistance;
         //this checks to see if we have finished running our path
-        if (dist != Mathf.Infinity && navAgent.pathStatus == NavMeshPathStatus.PathComplete && navAgent.remainingDistance == 0)
+        if (dist != Mathf.Infinity && ((navAgent.pathStatus == NavMeshPathStatus.PathComplete && navAgent.remainingDistance == 0) || navAgent.remainingDistance < navAgent.radius))
         {
             //this gets a random location on the mesh and moves to it
-            Vector3 randomDirection = Random.insideUnitSphere * 40;
+            Vector3 randomDirection = Random.insideUnitSphere * 20;
             randomDirection += transform.position;
             NavMeshHit hit;
-            NavMesh.SamplePosition(randomDirection, out hit, 40, 1);
+            NavMesh.SamplePosition(randomDirection, out hit, 20, 1);
             Vector3 finalPosition = hit.position;
             navAgent.SetDestination(finalPosition);
             print("finding new path");
@@ -67,6 +68,7 @@ public class Basic_AI : MonoBehaviour, Damageable
             {
                 smoothTurret += Time.deltaTime * snappingSpeed;
             }
+            print("test1");
             turretTransform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z)), smoothTurret);
             if (currentBurstTime >= burstTime)
             {
@@ -108,7 +110,7 @@ public class Basic_AI : MonoBehaviour, Damageable
             //shoot a line to that player to see if we hit a wall before we hit the player, if so then we can't see the player and shouldn't aim at it
             if (Physics.Raycast(transform.position, players[i].transform.position - transform.position, out hit, 10000))
             {
-                print("test1");
+                
                 Debug.DrawLine(transform.position, hit.point, Color.red);
                 if (hit.collider.gameObject.tag.Equals("Player"))
                 {
@@ -116,7 +118,7 @@ public class Basic_AI : MonoBehaviour, Damageable
                 }
             } else
             {
-                print("test");
+                
                 Debug.DrawRay(transform.position, players[i].transform.position - transform.position, Color.red);
             }
 
