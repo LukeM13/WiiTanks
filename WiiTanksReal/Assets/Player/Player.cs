@@ -9,6 +9,8 @@ public class Player : MonoBehaviour, Damageable
     public float speed;
     public Transform spawnPoint;
     public Object bulletType;
+    public Object Rocket;
+    public Object splitBullet;
 
     private CharacterController controller;
     private Rigidbody rigid;
@@ -45,6 +47,17 @@ public class Player : MonoBehaviour, Damageable
             //this creates a new object of bullet at the certain position and rotation
             Instantiate(bulletType, spawnPoint.position, spawnPoint.rotation);
             //play particle effect
+            turretSmoke.Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Instantiate(Rocket, spawnPoint.position, spawnPoint.rotation);
+            turretSmoke.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            Instantiate(splitBullet, spawnPoint.position, spawnPoint.rotation);
             turretSmoke.Play();
         }
 

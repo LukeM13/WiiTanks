@@ -7,25 +7,25 @@ public class bullet : MonoBehaviour
 {
 
     Rigidbody rigid;
-    Collider collider;
+    Collider collid;
     public float speed = 1.0f;
     public float damage;
     public int maxNumberOfWallHits = 0;
-    private int numOfHits;
-    private bool destroy;
+    public int numOfHits;
+    public bool destroy;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         //gets the rigid body 
         rigid = GetComponent<Rigidbody>();
         //gets the collider
-        collider = GetComponent<Collider>();
+        collid = GetComponent<Collider>();
 
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
 
         //checks to see if we hit the walls too many times
@@ -45,7 +45,7 @@ public class bullet : MonoBehaviour
     }
 
     //this is called every time the collider hits an object with a collider
-    void OnCollisionEnter(Collision col)
+    protected void OnCollisionEnter(Collision col)
     {
         //checks to see if we hit a wall
         if (col.gameObject.tag == "Wall")
