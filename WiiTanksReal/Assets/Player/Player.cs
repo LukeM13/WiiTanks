@@ -170,8 +170,8 @@ public class Player : MonoBehaviour, Damageable
     }
 
 
-//this is called when ever the tank is damaged
-public void damage(float damage, GameObject other)
+    //this is called when ever the tank is damaged
+    public void damage(float damage, GameObject other)
     {
         health -= damage;
         print("Health is: " + health);
