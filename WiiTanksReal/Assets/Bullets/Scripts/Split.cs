@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Split : bullet
+public class Split : BulletParent
 {
     //private int numOfHits = 0;
     //private bool destroy = false;
     public Object shard;
     // Start is called before the first frame update
-    void Start()
-    {
-        base.Start();
-        Debug.Log("Split Make");
-    }
 
     // Update is called once per frame
     void Update()

@@ -6,22 +6,17 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
 
-    Rigidbody rigid;
-    Collider collid;
+    private Collider collider;
     public float speed = 1.0f;
     public float damage;
-    public int maxNumberOfWallHits = 0;
+    public int maxNumberOfWallHits = 1;
     public int numOfHits;
-    public bool destroy;
+    private bool destroy;
 
     // Start is called before the first frame update
     protected void Start()
     {
-        //gets the rigid body 
-        rigid = GetComponent<Rigidbody>();
-        //gets the collider
-        collid = GetComponent<Collider>();
-
+        collider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -47,6 +42,7 @@ public class bullet : MonoBehaviour
     //this is called every time the collider hits an object with a collider
     protected void OnCollisionEnter(Collision col)
     {
+        print("collide");
         //checks to see if we hit a wall
         if (col.gameObject.tag == "Wall")
         {

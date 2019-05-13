@@ -6,10 +6,10 @@ public class BulletManager : MonoBehaviour
 {
 
     [HideInInspector]
-    public List<BulletParent> bullets;
+    public List<Object> bullets;
 
     public Transform spawnPoint;
-    public BulletParent testBullet;
+    public Object testBullet;
     private ParticleSystem turretSmoke;
 
     public int activeBullet = 0;
