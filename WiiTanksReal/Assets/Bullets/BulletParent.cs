@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DefaultBullet", menuName = "Bullet")]
 public class BulletParent: MonoBehaviour
 {
 
