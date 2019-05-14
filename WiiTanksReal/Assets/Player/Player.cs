@@ -191,7 +191,7 @@ public class Player : MonoBehaviour, Damageable
         {
             if (wantedAngle - currentAngle < (wantedAngle - 180) - currentAngle)
             {
-                print("123232Closer angle to " + (wantedAngle - currentAngle) + "is: " + ((wantedAngle - 180) - currentAngle));
+               // print("123232Closer angle to " + (wantedAngle - currentAngle) + "is: " + ((wantedAngle - 180) - currentAngle));
                 return wantedAngle;
             }
             else if (wantedAngle - currentAngle == (wantedAngle - 180) - currentAngle)
@@ -200,7 +200,7 @@ public class Player : MonoBehaviour, Damageable
             }
             else
             {
-                print("2Closer angle to " + currentAngle + "is: " + (wantedAngle - 180));
+                //print("2Closer angle to " + currentAngle + "is: " + (wantedAngle - 180));
                 return wantedAngle - 180;
             }
         }
@@ -208,12 +208,12 @@ public class Player : MonoBehaviour, Damageable
         {
             if (wantedAngle - currentAngle >= (wantedAngle + 180) - currentAngle)
             {
-                print("3Closer angle to " + currentAngle + "is: " + wantedAngle);
+                //print("3Closer angle to " + currentAngle + "is: " + wantedAngle);
                 return wantedAngle;
             }
             else
             {
-                print("4Closer angle to " + currentAngle + "is: " +(wantedAngle + 180));
+                //print("4Closer angle to " + currentAngle + "is: " +(wantedAngle + 180));
                 return wantedAngle + 180;
             }
         }
