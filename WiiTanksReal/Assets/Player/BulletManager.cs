@@ -10,6 +10,7 @@ public class BulletManager : MonoBehaviour
 
     public Transform spawnPoint;
     public Object testBullet;
+    public Object rocket;
     private ParticleSystem turretSmoke;
 
     public int activeBullet = 0;
@@ -20,10 +21,25 @@ public class BulletManager : MonoBehaviour
         turretSmoke = GetComponentInChildren<ParticleSystem>();
 
         bullets.Add(testBullet);
+        bullets.Add(rocket);
     }
 
     void Update()
     {
+        if (Input.GetButtonDown("Inventory1"))
+        {
+            activeBullet = 0;
+        }
+        if (Input.GetButtonDown("Inventory2"))
+        {
+            activeBullet = 1;
+        }
+        if (Input.GetButtonDown("Inventory3"))
+        {
+            activeBullet = 2;
+        }
+
+
         //this shoots the bullet
         if (Input.GetButtonDown("Fire1"))
         {
