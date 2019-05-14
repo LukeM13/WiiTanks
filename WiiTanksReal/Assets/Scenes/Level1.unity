@@ -4034,12 +4034,12 @@ PrefabInstance:
     - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: bodyTransform
-      value: 
+      value:
       objectReference: {fileID: 1357664073}
     - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: deathParticle
-      value: 
+      value:
       objectReference: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
         type: 3}
     - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
@@ -4080,12 +4080,12 @@ PrefabInstance:
     - target: {fileID: 1549077976220243102, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: spawnPoint
-      value: 
+      value:
       objectReference: {fileID: 1928128163}
     - target: {fileID: 1549077976220243102, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: testBullet
-      value: 
+      value:
       objectReference: {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4,
         type: 3}
     m_RemovedComponents: []
@@ -4302,7 +4302,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2140865040}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:WiiTanksReal/Assets/Scenes/Test Scene.unity
 --- !u!64 &1476098426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4317,77 +4316,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -5495902117074765545, guid: 0e474e2f97e4e224795183a040f0d1a1, type: 3}
-=======
---- !u!1001 &1480147902
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7130490666581385568, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_Name
-      value: Bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.277156
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7691157e-16
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.560865
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.0027398446
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.11080126
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.00005768818
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99383885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.31100002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 12.723001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.041
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fc107d3e264f84ba9bf926b8b8ed9e01, type: 3}
->>>>>>> 27a61f4be7bfaf8ad3536eef94e89e94140f6946:WiiTanksReal/Assets/Scenes/Level1.unity
 --- !u!1001 &1500622960
 PrefabInstance:
   m_ObjectHideFlags: 0
