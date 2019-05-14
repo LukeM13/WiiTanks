@@ -39,6 +39,26 @@ public class Player : MonoBehaviour, Damageable
         //set the value for moving left and right
         vertValue = Input.GetAxis("Vertical");
 
+        //this shoots the bullet
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    //this creates a new object of bullet at the certain position and rotation
+        //    Instantiate(bulletType, spawnPoint.position, spawnPoint.rotation);
+        //    //play particle effect
+        //    turretSmoke.Play();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    Instantiate(Rocket, spawnPoint.position, spawnPoint.rotation);
+        //    turretSmoke.Play();
+        //}
+        //if (Input.GetKeyDown(KeyCode.V))
+        //{
+        //    Instantiate(splitBullet, spawnPoint.position, spawnPoint.rotation);
+        //    turretSmoke.Play();
+        //}
+
         moveTank();
         turnTank();
 
@@ -150,8 +170,8 @@ public class Player : MonoBehaviour, Damageable
     }
 
 
-//this is called when ever the tank is damaged
-public void damage(float damage, GameObject other)
+    //this is called when ever the tank is damaged
+    public void damage(float damage, GameObject other)
     {
         health -= damage;
         print("Health is: " + health);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -689,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 1673300855570002316, guid: 23176e4be07c9784daba41813fa9bb10,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1673300855570002316, guid: 23176e4be07c9784daba41813fa9bb10,
         type: 3}
@@ -1208,7 +1208,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &312708920
 PrefabInstance:
@@ -1874,7 +1874,7 @@ Transform:
   m_LocalScale: {x: 5.5, y: 3, z: 3.6}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &594866713
 PrefabInstance:
@@ -2454,7 +2454,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: 2.9304469e+23, z: 1e-45, w: 5.42e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2470,7 +2470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &796334214 stripped
 GameObject:
@@ -2532,7 +2532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &874941053 stripped
 Transform:
@@ -2865,7 +2865,7 @@ Transform:
   - {fileID: 672348886}
   - {fileID: 1709385709}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1065240713
 PrefabInstance:
@@ -3940,7 +3940,7 @@ PrefabInstance:
     - target: {fileID: 1600695258537497667, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1600695258537497667, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
@@ -4013,6 +4013,12 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1928128163}
+    - target: {fileID: 1549077976220243102, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: testBullet
+      value: 
+      objectReference: {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3764028c0f149e39de49176e464c4f, type: 3}
 --- !u!4 &1413914702 stripped
@@ -4227,6 +4233,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2140865040}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:WiiTanksReal/Assets/Scenes/Test Scene.unity
 --- !u!64 &1476098426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4241,6 +4248,77 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -5495902117074765545, guid: 0e474e2f97e4e224795183a040f0d1a1, type: 3}
+=======
+--- !u!1001 &1480147902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7130490666581385568, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.277156
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7691157e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.560865
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0027398446
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.11080126
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00005768818
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99383885
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.31100002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 12.723001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130490666581385570, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.041
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc107d3e264f84ba9bf926b8b8ed9e01, type: 3}
+>>>>>>> 27a61f4be7bfaf8ad3536eef94e89e94140f6946:WiiTanksReal/Assets/Scenes/Level1.unity
 --- !u!1001 &1500622960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4752,7 +4830,7 @@ Transform:
   - {fileID: 796334215}
   - {fileID: 1476098423}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1761232645 stripped
 Transform:
@@ -5952,7 +6030,7 @@ PrefabInstance:
     - target: {fileID: 8417255216378763085, guid: afee06646065f96458c951c806d09eb5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8417255216378763085, guid: afee06646065f96458c951c806d09eb5,
         type: 3}
