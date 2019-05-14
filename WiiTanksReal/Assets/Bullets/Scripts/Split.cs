@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Split : BulletParent
+public class Split : MonoBehaviour
 {
+
+    private Collider collider;
+    public float speed = 1.0f;
+    public float damage;
+    public int maxNumberOfWallHits = 1;
+    public int numOfHits;
+    private bool destroy;
+
     //private int numOfHits = 0;
     //private bool destroy = false;
     public Object shard;
@@ -67,6 +75,20 @@ public class Split : BulletParent
                 damageObject.damage(damage, this.gameObject);
             }
 
+        }
+    }
+    //this is a function that gets the interfaces from all the scripts on an object
+    public static void GetInterfaces<T>(out List<T> resultList, GameObject objectToSearch) where T : class
+    {
+        MonoBehaviour[] list = objectToSearch.GetComponents<MonoBehaviour>();
+        resultList = new List<T>();
+        foreach (MonoBehaviour mb in list)
+        {
+            if (mb is T)
+            {
+                //found one
+                resultList.Add((T)((System.Object)mb));
+            }
         }
     }
 }

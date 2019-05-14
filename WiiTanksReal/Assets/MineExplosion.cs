@@ -6,6 +6,10 @@ public class MineExplosion : MonoBehaviour
 {
     private SphereCollider collider;
     public float damage;
+    private float endSize; 
+    public float lifetime;
+
+    private float currentTime;
 
     // Start is called before the first frame update
     void Start()

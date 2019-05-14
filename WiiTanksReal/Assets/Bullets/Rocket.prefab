@@ -4860,7 +4860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   damage: 10
-  maxNumberOfWallHits: 1
+  maxNumberOfWallHits: 2
   numOfHits: 0
 --- !u!54 &8095819809813122620
 Rigidbody:
