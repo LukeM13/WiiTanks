@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class SceneManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SceneManager : MonoBehaviour
 
     void Awake()
     {
+        
         if (sceneManager == null)
         {
             sceneManager = this;
