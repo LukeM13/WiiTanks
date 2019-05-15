@@ -27,12 +27,13 @@ public class Split : MonoBehaviour
              */
 
             //destroy this game object if we have hit the wall
-            //Instantiate(shard, transform);
+            Instantiate(shard, transform);
             Destroy(gameObject);
         }
         //this moves the posion of the bullet every frame so that it moves strait and has no curve
         //or gravity
         transform.position += transform.forward * Time.deltaTime * speed;
+        //Instantiate(shard, transform);
     }
     private void OnCollisionStay(Collision collision)
     {
