@@ -99,9 +99,10 @@ MonoBehaviour:
   bullets: []
   mine: {fileID: 5999835948228564969, guid: 1b6ad96220def35449b2a844cb5c0e38, type: 3}
   spawnPoint: {fileID: 613731546220627752}
-  testBullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc,
+  testBullet: {fileID: 7130490666581385568, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
     type: 3}
-  rocket: {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
+  rocket: {fileID: 0}
+  mine: {fileID: 0}
   activeBullet: 0
 --- !u!1 &1655467202285135617
 GameObject:

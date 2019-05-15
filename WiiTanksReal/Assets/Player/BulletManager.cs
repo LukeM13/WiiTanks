@@ -13,6 +13,7 @@ public class BulletManager : MonoBehaviour
     public Transform spawnPoint;
     public Object testBullet;
     public Object rocket;
+   //public Object mine;
     private ParticleSystem turretSmoke;
 
     public int activeBullet = 0;
@@ -24,6 +25,7 @@ public class BulletManager : MonoBehaviour
 
         bullets.Add(testBullet);
         bullets.Add(rocket);
+        bullets.Add(mine);
     }
 
     void Update()
