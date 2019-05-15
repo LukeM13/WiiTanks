@@ -6,9 +6,7 @@ public class MineExplosion : MonoBehaviour
 {
     private SphereCollider collider;
     public float damage;
-    private float endSize; 
     public float lifetime;
-
     private float currentTime;
 
     // Start is called before the first frame update
@@ -20,7 +18,11 @@ public class MineExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentTime >= lifetime)
+        {
+            Destroy(gameObject);
+        }
+        currentTime += Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider col)
