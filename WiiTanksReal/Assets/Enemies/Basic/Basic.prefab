@@ -5234,7 +5234,7 @@ MonoBehaviour:
   snappingSpeed: 1
   burstAmount: 2
   burstTime: 2
-  bullet: {fileID: 7130490666581385568, guid: fc107d3e264f84ba9bf926b8b8ed9e01, type: 3}
+  bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   spawnPoint: {fileID: 75671203962463399}
 --- !u!195 &75671205565108631
 NavMeshAgent:
