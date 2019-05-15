@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullets: []
+  mine: {fileID: 0}
   spawnPoint: {fileID: 613731546220627752}
   testBullet: {fileID: 7130490666581385569, guid: fc107d3e264f84ba9bf926b8b8ed9e01,
     type: 3}
+  rocket: {fileID: 0}
   activeBullet: 0
 --- !u!1 &1655467202285135617
 GameObject:
