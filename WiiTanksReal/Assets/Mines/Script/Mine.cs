@@ -6,6 +6,7 @@ public class Mine : MonoBehaviour
 {
 
     public Object explosion;
+    private bool isSpawnedInPlayer = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +22,20 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag.Equals("Tank") || col.gameObject.tag.Equals("Player"))
+        if (col.gameObject.tag.Equals("Tank") || col.gameObject.tag.Equals("Player") && !isSpawnedInPlayer)
         {
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        print("can explode");
+        if ((col.gameObject.tag.Equals("Tank") || col.gameObject.tag.Equals("Player")) && isSpawnedInPlayer)
+        {
+            isSpawnedInPlayer = false;
+           
         }
     }
 }
