@@ -8,6 +8,8 @@ public class BulletManager : MonoBehaviour
     [HideInInspector]
     public List<Object> bullets;
 
+    public Object mine;
+
     public Transform spawnPoint;
     public Object testBullet;
     public Object rocket;
@@ -49,6 +51,12 @@ public class BulletManager : MonoBehaviour
             Instantiate(bullets[activeBullet], spawnPoint.position, spawnPoint.rotation);
             //play particle effect
             turretSmoke.Play();
+        }
+
+        //this places a mine
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Instantiate(mine, gameObject.transform.position, gameObject.transform.rotation);
         }
 
     }

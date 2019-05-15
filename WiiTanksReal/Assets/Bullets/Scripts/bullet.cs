@@ -11,10 +11,12 @@ public class bullet : MonoBehaviour
     public int numOfHits;
     private bool destroy;
 
+    private float defaultY;
+
     // Start is called before the first frame update
     protected void Start()
     {
-
+        defaultY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -61,10 +63,10 @@ public class bullet : MonoBehaviour
                 return;
             }
 
-           
+
 
             //this gets the reflected vector and sets the forward direction of this object to that vector
-            transform.forward = Vector3.Reflect(transform.forward, col.GetContact(0).normal);
+            transform.forward = new Vector3(Vector3.Reflect(transform.forward, col.GetContact(0).normal).x, 0, Vector3.Reflect(transform.forward, col.GetContact(0).normal).z);
             print("collide");
 
             numOfHits++;
