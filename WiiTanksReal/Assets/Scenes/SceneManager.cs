@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 public class SceneManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class SceneManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    internal static void LoadScene(object p)
+    {
+        throw new NotImplementedException();
     }
 
     // Start is called before the first frame update

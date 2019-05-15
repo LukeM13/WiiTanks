@@ -13,7 +13,7 @@ public class BulletManager : MonoBehaviour
     public Transform spawnPoint;
     public Object testBullet;
     public Object rocket;
-    public Object mine;
+   //public Object mine;
     private ParticleSystem turretSmoke;
 
     public int activeBullet = 0;
