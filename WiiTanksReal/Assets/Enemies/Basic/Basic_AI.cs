@@ -68,7 +68,7 @@ public class Basic_AI : MonoBehaviour, Damageable
             {
                 smoothTurret += Time.deltaTime * snappingSpeed;
             }
-            print("test1");
+            print("test1"); 
             turretTransform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z)), smoothTurret);
             if (currentBurstTime >= burstTime)
             {
