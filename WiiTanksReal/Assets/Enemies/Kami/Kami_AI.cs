@@ -34,7 +34,7 @@ public class Kami_AI : MonoBehaviour, Damageable
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag.Equals("Player"))
         {
@@ -42,6 +42,7 @@ public class Kami_AI : MonoBehaviour, Damageable
             Destroy(gameObject);
         }
     }
+
 
     //we we are hit with a bullet
     public void damage(float damage, GameObject other)
