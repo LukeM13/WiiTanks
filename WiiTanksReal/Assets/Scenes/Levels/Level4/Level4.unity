@@ -979,12 +979,13 @@ PrefabInstance:
     - target: {fileID: 1549077976220243102, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: testBullet
-      value:
-      objectReference: {fileID: 2100000, guid: a4cb27e52a4054fb28f2a2ef2cccc45d, type: 2}
+      value: 
+      objectReference: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc,
+        type: 3}
     - target: {fileID: 1549077976220243102, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: rocket
-      value:
+      value: 
       objectReference: {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4,
         type: 3}
     m_RemovedComponents: []
@@ -1174,7 +1175,7 @@ Transform:
   - {fileID: 1643459253}
   - {fileID: 368936574}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &832670148
 PrefabInstance:
