@@ -43,7 +43,7 @@ public class GameMode : MonoBehaviour
 
     void Awake()
     {
-        
+
         if (gameMode == null)
         {
             gameMode = this;
@@ -60,13 +60,12 @@ public class GameMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void nextScene()
