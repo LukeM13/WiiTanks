@@ -35,19 +35,22 @@ public class bullet : MonoBehaviour
         }
         //this moves the posion of the bullet every frame so that it moves strait and has no curve
         //or gravity
-        transform.position += new Vector3(transform.forward.x * Time.deltaTime * speed, 0 , transform.forward.z * Time.deltaTime * speed);
+
+        Debug.DrawRay(transform.position, transform.forward, Color.red);
+
+        transform.position += transform.forward * Time.deltaTime * speed;
+        print(transform.forward * Time.deltaTime * speed);
 
     }
 
     //this is called every time the collider hits an object with a collider
     protected void OnCollisionEnter(Collision col)
     {
-        
         //checks to see if we hit a wall
         if (col.gameObject.tag.Equals("Wall"))
         {
             //if we hit a damage able wall we want to damage the wall and destroy the bullet
-
+            
             //get the damage interface from the scripts on the wall
             List<Damageable> damageScripts; ;
             //returns a list of damageable interface
@@ -64,10 +67,10 @@ public class bullet : MonoBehaviour
             }
 
 
-
+            print(transform.forward);
             //this gets the reflected vector and sets the forward direction of this object to that vector
-            transform.forward = new Vector3(Vector3.Reflect(transform.forward, col.GetContact(0).normal).x, 0, Vector3.Reflect(transform.forward, col.GetContact(0).normal).z);
-            print("collide");
+            transform.forward = Vector3.Reflect(transform.forward, col.GetContact(0).normal);
+            print(transform.forward);
 
             numOfHits++;
         }
