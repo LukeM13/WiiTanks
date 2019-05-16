@@ -38,6 +38,8 @@ public class bullet : MonoBehaviour
 
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
+
+
         transform.position += transform.forward * Time.deltaTime * speed;
         
 
@@ -68,7 +70,7 @@ public class bullet : MonoBehaviour
 
             //this gets the reflected vector and sets the forward direction of this object to that vector
             transform.forward = Vector3.Reflect(transform.forward, col.GetContact(0).normal);
-            Debug.DrawRay(col.GetContact(0).point, Vector3.Reflect(transform.forward, col.GetContact(0).normal), Color.red);
+            Debug.DrawLine(col.GetContact(0).point, transform.forward * 1000, Color.red);
 
             numOfHits++;
         }
