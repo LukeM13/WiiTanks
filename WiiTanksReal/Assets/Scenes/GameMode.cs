@@ -36,9 +36,11 @@ public struct LevelData
 public class GameMode : MonoBehaviour
 {
 
+    public SceneAsset bulletSelectScene;
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
+    
     private static int currentLevel = 0;
 
     void Awake()
@@ -65,13 +67,23 @@ public class GameMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       // if(gameScenes.GetType
     }
 
-    public void nextScene()
+    public void loadBulletSelect()
     {
-        print("Loading Scene " + gameScenes[currentLevel].scene.name);
+        SceneManager.LoadScene(bulletSelectScene.name);
+    }
+
+    public void nextLevel()
+    {
         currentLevel++;
         SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
     }
+
+    public LevelData getNextLevelInfo ()
+    {
+        return gameScenes[currentLevel + 1];
+    }
+
 }
