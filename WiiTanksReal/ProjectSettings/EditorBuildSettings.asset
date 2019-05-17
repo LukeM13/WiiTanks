@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level4/Level4.unity
     guid: 946de7dfc95184eac8e0f64ee12fdcd3
+  - enabled: 1
+    path: Assets/Scenes/BulletSelect/BulletSelectScene.unity
+    guid: e5120d5e804fd4801aee07ad2413a0b1
   m_configObjects: {}

@@ -36,6 +36,7 @@ public struct LevelData
 public class GameMode : MonoBehaviour
 {
 
+    public SceneAsset bulletSelectScene;
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
@@ -69,11 +70,20 @@ public class GameMode : MonoBehaviour
        // if(gameScenes.GetType
     }
 
-    public void nextScene()
+    public void loadBulletSelect()
     {
-        //print("Loading Scene " + gameScenes[currentLevel].scene.name);
-        //currentLevel++;
-        //SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(bulletSelectScene.name);
     }
+
+    public void nextLevel()
+    {
+        currentLevel++;
+        SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
+    }
+
+    public LevelData getNextLevelInfo ()
+    {
+        return gameScenes[currentLevel + 1];
+    }
+
 }
