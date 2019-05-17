@@ -39,6 +39,7 @@ public class GameMode : MonoBehaviour
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
+    
     private static int currentLevel = 0;
 
     void Awake()
@@ -65,13 +66,14 @@ public class GameMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       // if(gameScenes.GetType
     }
 
     public void nextScene()
     {
-        print("Loading Scene " + gameScenes[currentLevel].scene.name);
-        currentLevel++;
-        SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
+        //print("Loading Scene " + gameScenes[currentLevel].scene.name);
+        //currentLevel++;
+        //SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

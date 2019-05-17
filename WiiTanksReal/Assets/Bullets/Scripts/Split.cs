@@ -33,7 +33,7 @@ public class Split : MonoBehaviour
         //this moves the posion of the bullet every frame so that it moves strait and has no curve
         //or gravity
         transform.position += transform.forward * Time.deltaTime * speed;
-        //Instantiate(shard, transform);
+        Instantiate(shard, transform);
     }
     private void OnCollisionStay(Collision collision)
     {
