@@ -46,8 +46,9 @@ public abstract class AIParent : MonoBehaviour, Damageable
         //makes a particle effect that hides the tank disappearing
         Instantiate(deathParticle, transform.position, transform.rotation);
         deathParticle.Play();
-        sceneController.tankKill();
         Destroy(gameObject);
+        sceneController.tankKill();
+
     }
 
     protected int findPlayer()
