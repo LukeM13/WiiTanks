@@ -8,6 +8,9 @@ TagManager:
   - Tank
   - GameMode
   - SceneController
+  - Bullet
+  - Boundry
+  - Mine
   layers:
   - Default
   - TransparentFX

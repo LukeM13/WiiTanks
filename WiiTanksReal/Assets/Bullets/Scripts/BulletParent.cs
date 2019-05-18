@@ -45,6 +45,13 @@ public class BulletParent : MonoBehaviour
 
             numOfHits++;
         }
+        else if (col.gameObject.tag.Equals("Boundry"))
+        {
+            //this gets the reflected vector and sets the forward direction of this object to that vector
+            transform.forward = Vector3.Reflect(transform.forward, col.GetContact(0).normal);
+            print("hit boundry");
+            numOfHits++;
+        }
         //checks to see if we hit a tank
         else if (col.gameObject.tag.Equals("Tank"))
         {
@@ -74,5 +81,6 @@ public class BulletParent : MonoBehaviour
             destroy = true;
             Destroy(col.gameObject);
         }
+
     }
 }

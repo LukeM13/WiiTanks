@@ -33,7 +33,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
     public void damage(float damage, GameObject other)
     {
         health -= damage;
-        print(health);
+        
         if (health <= 0)
         {
             death();
@@ -46,8 +46,9 @@ public abstract class AIParent : MonoBehaviour, Damageable
         //makes a particle effect that hides the tank disappearing
         Instantiate(deathParticle, transform.position, transform.rotation);
         deathParticle.Play();
-        sceneController.tankKill();
         Destroy(gameObject);
+        sceneController.tankKill();
+        print("Kill tank");
     }
 
     protected int indexOfSeenPlayer()

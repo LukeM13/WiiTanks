@@ -12,9 +12,9 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameMode = GameObject.FindWithTag("GameMode").GetComponent<GameMode>();
-
         numberOfAI = GameObject.FindGameObjectsWithTag("Tank").Length;
+
+        gameMode = GameObject.FindWithTag("GameMode").GetComponent<GameMode>();
     }
 
     // Update is called once per frame

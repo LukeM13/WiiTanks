@@ -10,11 +10,16 @@ public class TurretScript : MonoBehaviour
 
     private Camera camera;
 
+
+    private LineRenderer mouseLine;
+
     // Start is called before the first frame update
     void Start()
     {
         //this gets the scenes main camera
         camera = Camera.main;
+
+        mouseLine = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -31,10 +36,26 @@ public class TurretScript : MonoBehaviour
         //on one axis and not 3
         if (Physics.Raycast(camera.transform.position, screenPos - camera.transform.position, out hit, 1000))
         {
-        //this is called if the raycast his something and it turns the turret toward
-        //the that hit point
-        transform.rotation = Quaternion.LookRotation(transform.position - new Vector3(hit.point.x, transform.position.y, hit.point.z));
+            //this is called if the raycast his something and it turns the turret toward
+            //the that hit point
+            transform.rotation = Quaternion.LookRotation(transform.position - new Vector3(hit.point.x, transform.position.y, hit.point.z));
 
+            RaycastHit lineHit;
+
+            if (Physics.Raycast(transform.position, (transform.position - new Vector3(hit.point.x, transform.position.y, hit.point.z)) * -1, out lineHit, 1000))
+            {
+                if (lineHit.collider.gameObject.tag.Equals("Boundry"))
+                {
+                    mouseLine.enabled = true;
+                    mouseLine.SetPosition(0, transform.position);
+                    mouseLine.SetPosition(1, new Vector3(hit.point.x, transform.position.y, hit.point.z));
+                }
+                else
+                {
+                    mouseLine.enabled = false;
+                }
+
+            }
         }
     }
 }
