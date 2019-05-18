@@ -46,7 +46,7 @@ public class Basic_AI : AIParent
             print("finding new path");
         }
 
-        activeIndex = findPlayer();
+        activeIndex = indexOfSeenPlayer();
 
         if (activeIndex != -1)
         {

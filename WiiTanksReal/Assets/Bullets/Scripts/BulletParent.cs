@@ -69,5 +69,10 @@ public class BulletParent : MonoBehaviour
                 damageObject.damage(damage, this.gameObject);
             }
         }
+        else if (col.gameObject.tag.Equals("Bullet"))
+        {
+            destroy = true;
+            Destroy(col.gameObject);
+        }
     }
 }

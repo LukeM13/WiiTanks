@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7458354048189589140}
   m_Layer: 0
   m_Name: Shard
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,8 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc4630f1901b4769af9f857a5a326a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  name: 
   speed: 2
   damage: 0
   maxNumberOfWallHits: 2
   numOfHits: 0
-  destroy: 0

@@ -50,7 +50,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
         Destroy(gameObject);
     }
 
-    protected int findPlayer()
+    protected int indexOfSeenPlayer()
     {
         //get raycast results
         RaycastHit hit;
@@ -75,6 +75,25 @@ public abstract class AIParent : MonoBehaviour, Damageable
 
         }
         return -1;
+    }
+
+    protected bool canSeePlayer(GameObject player)
+    {
+        //get raycast results
+        RaycastHit hit;
+        //shoot a line to that player to see if we hit a wall before we hit the player, if so then we can't see the player and shouldn't aim at it
+        if (Physics.Raycast(transform.position, player.transform.position - transform.position, out hit, 10000))
+        {
+
+            Debug.DrawLine(transform.position, hit.point, Color.red);
+            if (hit.collider.gameObject.tag.Equals("Player"))
+            {
+                return true;
+            }
+        }
+
+
+        return false;
     }
 
     protected GameObject getClosestPlayer()

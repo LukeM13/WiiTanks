@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -869.3, y: 90.2}
-  m_SizeDelta: {x: 277.8, y: 768.6}
+  m_AnchoredPosition: {x: -740, y: -0.000015259}
+  m_SizeDelta: {x: 298.2, y: 904.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &246157160
 MonoBehaviour:
@@ -671,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -66}
+  m_AnchoredPosition: {x: 348, y: -42}
   m_SizeDelta: {x: 1119, y: 509.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223375741
@@ -1368,6 +1368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankUI: {fileID: 4094042790994115766, guid: 867452732bcaa438e8c86adfc6bc1b30, type: 3}
   tankHolder: {fileID: 246157160}
+  bulletGrid: {fileID: 0}
+  bulletButtonPrefab: {fileID: 0}
 --- !u!4 &1971658658
 Transform:
   m_ObjectHideFlags: 0
