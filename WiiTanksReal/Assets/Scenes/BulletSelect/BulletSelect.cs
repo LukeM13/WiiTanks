@@ -7,18 +7,24 @@ using UnityEditor;
 
 public class BulletSelect : MonoBehaviour
 {
+    [Header("Data for Tanks")]
     public Object tankUI;
 
     private GameMode gameMode;
 
     public VerticalLayoutGroup tankHolder;
 
+    [Header("Bullet Select")]
+    public GridLayoutGroup bulletGrid;
+
+    public Object bulletButtonPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
         
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
-
+        //get the tanks 
         foreach (TankData tank in gameMode.getNextLevelInfo().tankInfo)
         {
            
@@ -33,12 +39,16 @@ public class BulletSelect : MonoBehaviour
             tankValues.updateValues(tank.type, tank.number);
         }
 
-    }
+        for (int i = 0; i < gameMode.numUnlockedBullets; i++)
+        {
+            //create a new tankUI object for the all the tanks in the level
+            GameObject bulletButton = (GameObject)Instantiate(bulletButtonPrefab);
+            //set this transform the the tankholder so that it aligns with everything
+            bulletButton.transform.SetParent(tankHolder.transform, false);
+            //bullet
+            //print()
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void goToNextLevel()
