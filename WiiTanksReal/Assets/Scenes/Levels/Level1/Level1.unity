@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4428903, g: 0.49206042, b: 0.57181454, a: 1}
+  m_IndirectSpecularColor: {r: 0.44288987, g: 0.49205983, b: 0.5718136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1881,6 +1881,11 @@ MonoBehaviour:
       number: 2
     - type: 2
       number: 1
+  bullets:
+  - {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
+  - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
+  - {fileID: 7642116510868501542, guid: 94e184c4a24cb415a9b9783bcb60bf2f, type: 3}
+  numUnlockedBullets: 1
 --- !u!4 &2126910907
 Transform:
   m_ObjectHideFlags: 0

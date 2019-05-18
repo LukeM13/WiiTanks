@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: -4462726413637537977}
-  - component: {fileID: 6001546413846864614}
   - component: {fileID: 4682693767458904553}
+  - component: {fileID: 6001546413846864614}
   - component: {fileID: 8298747112726008941}
   m_Layer: 0
   m_Name: Bullet
@@ -34,6 +34,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4682693767458904553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318862741418669022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ef49610ff8f42149b79aa171991d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  name: Bullet
+  speed: 10
+  damage: 10
+  maxNumberOfWallHits: 2
+  numOfHits: 0
 --- !u!65 &6001546413846864614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47,22 +65,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.5, z: 0.61}
   m_Center: {x: 0, y: 0, z: 0.02}
---- !u!114 &4682693767458904553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7318862741418669022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02ef49610ff8f42149b79aa171991d70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  damage: 10
-  maxNumberOfWallHits: 2
-  numOfHits: 0
 --- !u!54 &8298747112726008941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -90,11 +92,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BulletDefault
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: afc2b4d2f85414500a463a063b56d60d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: afc2b4d2f85414500a463a063b56d60d,
         type: 3}
@@ -156,6 +153,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4a8e58de6ac3d4cfeb29997d7b66fd5a, type: 2}
+    - target: {fileID: -6057140222963153312, guid: afc2b4d2f85414500a463a063b56d60d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afc2b4d2f85414500a463a063b56d60d, type: 3}
 --- !u!4 &1899468375646556918 stripped

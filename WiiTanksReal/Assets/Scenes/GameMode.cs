@@ -40,7 +40,13 @@ public class GameMode : MonoBehaviour
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
-    
+
+    [SerializeField]
+    public List<UnityEngine.Object> bullets = new List<UnityEngine.Object>();
+
+    [HideInInspector]
+    public int numUnlockedBullets = 1;
+
     private static int currentLevel = 0;
 
     void Awake()
@@ -72,12 +78,13 @@ public class GameMode : MonoBehaviour
 
     public void loadBulletSelect()
     {
+        currentLevel++;
+        numUnlockedBullets = Mathf.Clamp(numUnlockedBullets + 1, 1, bullets.Count);
         SceneManager.LoadScene(bulletSelectScene.name);
     }
 
     public void nextLevel()
-    {
-        currentLevel++;
+    { 
         SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
     }
 
