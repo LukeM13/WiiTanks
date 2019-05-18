@@ -33,7 +33,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
     public void damage(float damage, GameObject other)
     {
         health -= damage;
-        
+
         if (health <= 0)
         {
             death();
@@ -55,7 +55,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
     {
         //get raycast results
         RaycastHit hit;
-        //loop through them 
+        //loop through them
         for (int i = 0; i < players.Length; i++)
         {
             //shoot a line to that player to see if we hit a wall before we hit the player, if so then we can't see the player and shouldn't aim at it
