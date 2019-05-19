@@ -15,6 +15,7 @@ public class BulletParent : MonoBehaviour
     public float damage;
     public int maxNumberOfWallHits = 1;
     public int numOfHits;
+    public ParticleSystem deathParticle;
     protected bool destroy;
 
     //this is called every time the collider hits an object with a collider

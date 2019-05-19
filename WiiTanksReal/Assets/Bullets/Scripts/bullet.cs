@@ -22,7 +22,7 @@ public class bullet : BulletParent
             /*
              * make smoke particles spawn here 
              */
-
+            Instantiate(deathParticle, transform.position, Quaternion.Inverse(transform.rotation));
             //destroy this game object if we have hit the wall
             Destroy(gameObject);
         }
