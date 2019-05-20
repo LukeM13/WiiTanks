@@ -5100,9 +5100,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7275300756783099097}
   - component: {fileID: 7275300756783099095}
-  - component: {fileID: 7275300756783099094}
   - component: {fileID: 7275300756783099092}
   - component: {fileID: 3569983329120567540}
+  - component: {fileID: 2941255083941496801}
   m_Layer: 0
   m_Name: Smart
   m_TagString: Tank
@@ -5139,27 +5139,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.96, y: 2, z: 2.8}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &7275300756783099094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275300756783099096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd2345ab75aded468733a1899c817cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
-    type: 3}
-  health: 1
-  turretTransform: {fileID: 7275300756778839962}
-  snappingSpeed: 1
-  burstAmount: 2
-  burstTime: 2
-  bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
-  spawnPoint: {fileID: 7275300755180378596}
 --- !u!195 &7275300756783099092
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5198,6 +5177,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2941255083941496801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275300756783099096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22211d3532e45e64d8475812d2fa4a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
+    type: 3}
+  health: 1
+  turretTransform: {fileID: 7275300756778839962}
+  followSpeed: 1
+  burstAmount: 1
+  burstTime: 2
+  bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
+  spawnPoint: {fileID: 7275300755180378596}
+  minDistFromPlayer: 14.4
+  RaysToShoot: 8
 --- !u!1 &7275300756877060835
 GameObject:
   m_ObjectHideFlags: 0
