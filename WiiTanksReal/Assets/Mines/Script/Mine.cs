@@ -22,7 +22,7 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag.Equals("Tank") || (col.gameObject.tag.Equals("Player") && !isSpawnedInPlayer) || col.gameObject.tag.Equals("Bullet"))
+        if (((col.gameObject.tag.Equals("Tank") || col.gameObject.tag.Equals("Player")) && !isSpawnedInPlayer) || col.gameObject.tag.Equals("Bullet"))
         {
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
@@ -31,7 +31,6 @@ public class Mine : MonoBehaviour
 
     private void OnTriggerExit(Collider col)
     {
-        print("can explode");
         if ((col.gameObject.tag.Equals("Tank") || col.gameObject.tag.Equals("Player")) && isSpawnedInPlayer)
         {
             isSpawnedInPlayer = false;

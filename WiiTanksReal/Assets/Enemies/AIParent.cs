@@ -19,7 +19,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
 
     private SceneController sceneController;
 
-    void Start()
+    public void Start()
     {
         //gets the navmeshagent
         navAgent = GetComponent<NavMeshAgent>();

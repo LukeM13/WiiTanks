@@ -4864,6 +4864,8 @@ MonoBehaviour:
   damage: 10
   maxNumberOfWallHits: 2
   numOfHits: 0
+  deathParticle: {fileID: 3737692597982048424, guid: 211cd937af1e4554998bed695574c2a5,
+    type: 3}
 --- !u!54 &8095819809813122620
 Rigidbody:
   m_ObjectHideFlags: 0
