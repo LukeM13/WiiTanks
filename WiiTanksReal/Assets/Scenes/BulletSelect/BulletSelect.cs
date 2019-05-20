@@ -19,6 +19,10 @@ public class BulletSelect : MonoBehaviour
 
     public Object bulletButtonPrefab;
 
+    public GameObject[] SelectedBullets;
+
+    public int activeIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,8 +55,14 @@ public class BulletSelect : MonoBehaviour
 
     }
 
+    public void ButtonPressed(int index)
+    {
+        activeIndex = index;
+    }
+
     public void goToNextLevel()
     {
+        //gameMode.SelectedBullets = 
         gameMode.nextLevel();
     }
 }

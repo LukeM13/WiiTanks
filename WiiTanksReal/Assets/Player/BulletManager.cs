@@ -18,18 +18,18 @@ public class BulletManager : MonoBehaviour
 
     public int activeBullet = 0;
 
+    private GameMode gameMode;
+
     private void Start()
     {
         //this gets the turret smoke particle system on the turret object
         turretSmoke = GetComponentInChildren<ParticleSystem>();
 
-        bullets.Add(testBullet);
-        bullets.Add(rocket);
-        bullets.Add(mine);
+        bullets.AddRange(gameMode.bullets);
     }
 
     void Update()
-    {
+    { 
         if (Input.GetButtonDown("Inventory1"))
         {
             activeBullet = 0;
