@@ -25,7 +25,10 @@ public class BulletManager : MonoBehaviour
         //this gets the turret smoke particle system on the turret object
         turretSmoke = GetComponentInChildren<ParticleSystem>();
 
+        gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
+
         bullets.AddRange(gameMode.bullets);
+        print(bullets[0]);
     }
 
     void Update()

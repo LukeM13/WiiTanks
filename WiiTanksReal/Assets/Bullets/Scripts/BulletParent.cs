@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BulletParent : MonoBehaviour
 {
     [Header("UI Stuff For Bullet Select")]
-    public Image icon;
+    public Sprite icon;
     public string bulletName;
 
     [Header("Values to Affect the Bullet")]

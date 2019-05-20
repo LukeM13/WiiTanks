@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 3548297213029408643}
   - component: {fileID: 3548297213029408642}
   - component: {fileID: 1750688507174510294}
+  - component: {fileID: 8209422}
   m_Layer: 5
   m_Name: BulletPrefab
   m_TagString: Untagged
@@ -376,3 +377,17 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &8209422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3548297213029408644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa26f91cdddf44595b90bef0b8dc85f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  bulletIcon: {fileID: 3548297210972567142}

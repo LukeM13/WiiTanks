@@ -9,22 +9,22 @@ public class BulletPrefabScript : MonoBehaviour
     public BulletParent bullet;
 
     private Button button;
-    private TMP_Text text;
+    public Image bulletIcon;
+    private TMP_Text bulletName;
 
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
-        button.image = bullet.icon;
+        bulletIcon.sprite = bullet.icon;
 
-        text = GetComponentInChildren<TMP_Text>();
-        text.text = bullet.name;
+        bulletName = GetComponentInChildren<TMP_Text>();
+        bulletName.text = bullet.name;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
