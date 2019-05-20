@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ef49610ff8f42149b79aa171991d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  name: Bullet
+  icon: {fileID: 21300000, guid: f291f6ea9034042e98979670d9ad7c13, type: 3}
+  bulletName: Bullet
   speed: 10
   damage: 10
   maxNumberOfWallHits: 2
