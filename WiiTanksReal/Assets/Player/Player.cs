@@ -18,6 +18,7 @@ public class Player : MonoBehaviour, Damageable
     private float horzValue = 0.0f;
     private Vector3 moveDir = Vector3.zero;
 
+
     private float angle = 0;
 
     // Start is called before the first frame update
@@ -29,8 +30,6 @@ public class Player : MonoBehaviour, Damageable
         rigid = GetComponent<Rigidbody>();
         //This is what spawns the bullets and keeps track of bullet data
         bulletManager = GetComponent<BulletManager>();
-
-
     }
 
     // Update is called once per frame
@@ -40,15 +39,6 @@ public class Player : MonoBehaviour, Damageable
         horzValue = Input.GetAxis("Horizontal");
         //set the value for moving left and right
         vertValue = Input.GetAxis("Vertical");
-
-        //this shoots the bullet
-        //if (Input.GetButtonDown("Fire1"))
-        //{
-        //    //this creates a new object of bullet at the certain position and rotation
-        //    Instantiate(bulletType, spawnPoint.position, spawnPoint.rotation);
-        //    //play particle effect
-        //    turretSmoke.Play();
-        //}
 
         moveTank();
         turnTank();

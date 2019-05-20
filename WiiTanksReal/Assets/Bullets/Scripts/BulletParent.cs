@@ -15,6 +15,7 @@ public class BulletParent : MonoBehaviour
     public float damage;
     public int maxNumberOfWallHits = 1;
     public int numOfHits;
+    public ParticleSystem deathParticle;
     protected bool destroy;
 
     //this is called every time the collider hits an object with a collider
@@ -43,6 +44,13 @@ public class BulletParent : MonoBehaviour
             //this gets the reflected vector and sets the forward direction of this object to that vector
             transform.forward = Vector3.Reflect(transform.forward, col.GetContact(0).normal);
 
+            numOfHits++;
+        }
+        else if (col.gameObject.tag.Equals("Boundry"))
+        {
+            //this gets the reflected vector and sets the forward direction of this object to that vector
+            transform.forward = Vector3.Reflect(transform.forward, col.GetContact(0).normal);
+            print("hit boundry");
             numOfHits++;
         }
         //checks to see if we hit a tank
@@ -74,5 +82,6 @@ public class BulletParent : MonoBehaviour
             destroy = true;
             Destroy(col.gameObject);
         }
+
     }
 }

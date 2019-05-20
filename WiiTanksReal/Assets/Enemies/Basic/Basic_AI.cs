@@ -43,7 +43,6 @@ public class Basic_AI : AIParent
             NavMesh.SamplePosition(randomDirection, out hit, 20, 1);
             Vector3 finalPosition = hit.position;
             navAgent.SetDestination(finalPosition);
-            print("finding new path");
         }
 
         activeIndex = indexOfSeenPlayer();
@@ -54,7 +53,6 @@ public class Basic_AI : AIParent
             {
                 smoothTurret += Time.deltaTime * snappingSpeed;
             }
-            print("test1"); 
             turretTransform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z)), smoothTurret);
             if (currentBurstTime >= burstTime)
             {

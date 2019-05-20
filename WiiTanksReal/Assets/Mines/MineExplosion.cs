@@ -37,6 +37,9 @@ public class MineExplosion : MonoBehaviour
             {
                 tank.damage(damage, this.gameObject);
             }
+        } else if (col.gameObject.tag.Equals("Bullet"))
+        {
+            Destroy(col.gameObject);
         }
     }
 }

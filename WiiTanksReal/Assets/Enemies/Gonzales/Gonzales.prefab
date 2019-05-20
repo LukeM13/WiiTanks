@@ -280,8 +280,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
     type: 3}
-  turretTransform: {fileID: 8417255216441611278}
   health: 1
+  turretTransform: {fileID: 8417255216441611278}
   snappingSpeed: 1
   burstAmount: 2
   burstTime: 2
@@ -297,7 +297,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.6
-  m_Speed: 4.5
+  m_Speed: 5
   m_Acceleration: 21.53
   avoidancePriority: 50
   m_AngularSpeed: 360
