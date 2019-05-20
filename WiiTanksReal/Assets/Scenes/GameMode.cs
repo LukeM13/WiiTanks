@@ -71,10 +71,13 @@ public class GameMode : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-       // if(gameScenes.GetType
-    }
+    //void Update()
+    //{
+    //   for(bullet in Level1)
+    //    {
+
+    //    }
+    //}
 
     public void loadBulletSelect()
     {
