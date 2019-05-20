@@ -26,14 +26,17 @@ public class Smart_AI : AIParent
     public Object bullet;
     //the spawn point for the bullets
     public Transform spawnPoint;
+
     [Header("Brains Stuff")]
     [Range(1,20)]
     public float minDistFromPlayer;
-    private int angleIncrements;
+    public int RaysToShoot;
+
+    private Vector3 aimingAngle;
 
     private GameObject[] boundry;
 
-    private void Start()
+    public void Start()
     {
         base.Start();
 
@@ -44,21 +47,57 @@ public class Smart_AI : AIParent
     void Update()
     {
         GameObject player = getClosestPlayer();
-        if (Vector3.Distance(transform.position, player.transform.position) < minDistFromPlayer)
+        float minDist = float.MaxValue;
+        for (int i = 0; i < RaysToShoot; i++)
         {
-            if (canSeePlayer(player))
+            Vector3 dir = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + ((360 / RaysToShoot) * i), 
+                transform.rotation.z) * transform.forward;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, dir, out hit))
             {
-                //snap and start shooting
-                //maybe add prediction or something like that
-            } else
-            {
-                //figure out how to make it aim at the wall
-                //while (Physics.Raycast(transform.position, (transform.position - (player.transform.position)))
-                //{
-
-                //}
+                Debug.DrawLine(transform.position, hit.point, Color.red);
+                if (hit.collider.gameObject.tag.Equals("Wall") || hit.collider.gameObject.tag.Equals("Boundry"))
+                {
+                    RaycastHit reflectHit;
+                    Vector3 reflectDir = Vector3.Reflect(dir, hit.normal);
+                    if (Physics.Raycast(hit.point, reflectDir, out reflectHit))
+                    {
+                        if (Vector3.Distance(reflectHit.point, player.transform.position) < minDist)
+                        {
+                            aimingAngle = dir;
+                        }
+                        Debug.DrawLine(hit.point, reflectHit.point, Color.black);
+                    }
+                }
             }
         }
+        turretTransform.transform.rotation = Quaternion.LookRotation(aimingAngle);
+        //this gets the distance that the nav agent has left to move on its path
+        float dist = navAgent.remainingDistance;
+        //this checks to see if we have finished running our path
+        if (dist != Mathf.Infinity && ((navAgent.pathStatus == NavMeshPathStatus.PathComplete && navAgent.remainingDistance == 0) || navAgent.remainingDistance < navAgent.radius))
+        {
+            //this gets a random location on the mesh and moves to it
+            Vector3 randomDirection = Random.insideUnitSphere * 20;
+            randomDirection += transform.position;
+            NavMeshHit hit;
+            NavMesh.SamplePosition(randomDirection, out hit, 20, 1);
+            Vector3 finalPosition = hit.position;
+            navAgent.SetDestination(finalPosition);
+        }
+
+        //
+        //if (Vector3.Distance(transform.position, player.transform.position) < minDistFromPlayer)
+        //{
+        //    if (canSeePlayer(player))
+        //    {
+        //        //snap and start shooting
+        //        //maybe add prediction or something like that
+        //    } else
+        //    {
+
+        //    }
+        //}
 
     }
 }
