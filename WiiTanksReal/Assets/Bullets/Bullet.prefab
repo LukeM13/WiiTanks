@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4682693767458904553}
   - component: {fileID: 6001546413846864614}
   - component: {fileID: 8298747112726008941}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5860024686161709500}
   - component: {fileID: 3491111760774029058}
   - component: {fileID: 1360273055542083434}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4847,6 +4847,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BulletDefault
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: afc2b4d2f85414500a463a063b56d60d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: afc2b4d2f85414500a463a063b56d60d,
         type: 3}
