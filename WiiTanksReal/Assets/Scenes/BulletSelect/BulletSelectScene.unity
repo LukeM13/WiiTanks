@@ -1264,11 +1264,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulletPrefab (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8209422, guid: 9e271cf932b5b42e6a3197b4ff867303, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 4646386682741371841, guid: 75a09325a394049f3b66b161435736b4,
-        type: 3}
     - target: {fileID: 3548297213029408645, guid: 9e271cf932b5b42e6a3197b4ff867303,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1409,6 +1404,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1846304650}
+    - target: {fileID: 8209422, guid: 9e271cf932b5b42e6a3197b4ff867303, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4646386682741371841, guid: 75a09325a394049f3b66b161435736b4,
+        type: 3}
     - target: {fileID: 8209422, guid: 9e271cf932b5b42e6a3197b4ff867303, type: 3}
       propertyPath: bullet
       value: 
@@ -2178,11 +2178,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulletPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 8209422, guid: 9e271cf932b5b42e6a3197b4ff867303, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 4682693767458904553, guid: ac7e7f131ac3145a78efdca830af01dc,
-        type: 3}
     - target: {fileID: 3548297213029408645, guid: 9e271cf932b5b42e6a3197b4ff867303,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2323,6 +2318,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8209422}
+    - target: {fileID: 8209422, guid: 9e271cf932b5b42e6a3197b4ff867303, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4682693767458904553, guid: ac7e7f131ac3145a78efdca830af01dc,
+        type: 3}
     - target: {fileID: 8209422, guid: 9e271cf932b5b42e6a3197b4ff867303, type: 3}
       propertyPath: bullet
       value: 
