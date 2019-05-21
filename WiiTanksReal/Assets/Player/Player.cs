@@ -57,7 +57,8 @@ public class Player : MonoBehaviour, Damageable
          * this actually moves the player by moving in the moveDir * the time between each frame so that 
          * its consistant no matter what the frame rate is 
         */
-        controller.Move(moveDir * Time.deltaTime * speed);
+        rigid.MovePosition(transform.position + (moveDir * Time.deltaTime * speed));
+        //controller.Move();
     }
     bool goingUp = false;
     bool goingRight = false;

@@ -91,10 +91,9 @@ public class BulletSelect : MonoBehaviour
     public void goToNextLevel()
     {
         gameMode.bullets.Clear();
-        for (int i = 0; i < SelectedBullets.Length; i++)
+        for (int i = 0; i < bullets.Count; i++)
         {
             if (bullets[i] != null) {
-                print("Index " + i);
                 gameMode.bullets.Add(bullets[i].gameObject);
             }
             
