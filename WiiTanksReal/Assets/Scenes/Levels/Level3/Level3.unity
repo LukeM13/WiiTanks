@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -354,6 +354,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[2].tankInfo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[2].tankInfo.Array.data[0].type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81c14bc0a444a24f985d2933091abf1, type: 3}
