@@ -1564,7 +1564,7 @@ PrefabInstance:
     - target: {fileID: 7275300756783099097, guid: 1e439985894e3894e892dd8465eabd70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.23005217
+      value: -8.82
       objectReference: {fileID: 0}
     - target: {fileID: 7275300756783099097, guid: 1e439985894e3894e892dd8465eabd70,
         type: 3}
@@ -1605,6 +1605,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941255083941496801, guid: 1e439985894e3894e892dd8465eabd70,
+        type: 3}
+      propertyPath: RaysToShoot
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941255083941496801, guid: 1e439985894e3894e892dd8465eabd70,
+        type: 3}
+      propertyPath: ShootTime
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7275300756783099094, guid: 1e439985894e3894e892dd8465eabd70, type: 3}
@@ -1705,6 +1715,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundry
       objectReference: {fileID: 0}
+    - target: {fileID: 508383112976213374, guid: ec52d8700e4374848979bb3e6fff4951,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boundry
+      objectReference: {fileID: 0}
     - target: {fileID: 2798073533632065886, guid: ec52d8700e4374848979bb3e6fff4951,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1776,11 +1791,6 @@ PrefabInstance:
       value: Boundry
       objectReference: {fileID: 0}
     - target: {fileID: 286373650530066515, guid: ec52d8700e4374848979bb3e6fff4951,
-        type: 3}
-      propertyPath: m_TagString
-      value: Boundry
-      objectReference: {fileID: 0}
-    - target: {fileID: 508383112976213374, guid: ec52d8700e4374848979bb3e6fff4951,
         type: 3}
       propertyPath: m_TagString
       value: Boundry

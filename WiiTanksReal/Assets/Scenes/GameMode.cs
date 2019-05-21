@@ -10,8 +10,10 @@ using System;
 public enum TankType
 {
     basic,
+    Rocket,
     gonzales,
-    kami
+    Mineplacer,
+    kami,
 }
 [Serializable]
 public struct TankData
@@ -71,14 +73,6 @@ public class GameMode : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //   for(bullet in Level1)
-    //    {
-
-    //    }
-    //}
 
     public void loadBulletSelect()
     {

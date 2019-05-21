@@ -57,6 +57,67 @@ MonoBehaviour:
       number: 1
     - type: 1
       number: 1
+  - scene: {fileID: 102900000, guid: 9543fe45183864c689eb90ecd1722bed, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
   bullets:
   - {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
