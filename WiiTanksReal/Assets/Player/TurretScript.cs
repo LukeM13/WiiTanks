@@ -39,9 +39,9 @@ public class TurretScript : MonoBehaviour
             //this is called if the raycast his something and it turns the turret toward
             //the that hit point
             transform.rotation = Quaternion.LookRotation(transform.position - new Vector3(hit.point.x, transform.position.y, hit.point.z));
-
+            /*
             RaycastHit lineHit;
-
+            
             if (Physics.Raycast(transform.position, (transform.position - new Vector3(hit.point.x, transform.position.y, hit.point.z)) * -1, out lineHit, 1000))
             {
                 if (lineHit.collider.gameObject.tag.Equals("Boundry"))
@@ -56,6 +56,7 @@ public class TurretScript : MonoBehaviour
                 }
 
             }
+            */
         }
     }
 }

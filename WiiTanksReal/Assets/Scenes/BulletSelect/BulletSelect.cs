@@ -21,6 +21,9 @@ public class BulletSelect : MonoBehaviour
 
     public SelectedBulletScript[] SelectedBullets;
 
+    [HideInInspector]
+    public List<BulletParent> bullets = new List<BulletParent>();
+
     private int activeIndex = -1;
 
     // Start is called before the first frame update
@@ -53,27 +56,36 @@ public class BulletSelect : MonoBehaviour
 
     }
 
+    public void Update()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (bullets[i] != null)
+            {
+                SelectedBullets[i].updateValues(bullets[i]);
+            }
+            else
+            {
+                SelectedBullets[i].clearValues();
+            }
+        }
+    }
+
     public void inputBullet(BulletPrefabScript bulletPressed)
     {
-        if (activeIndex != -1)
+        if (bullets.Count <= 3)
         {
-            print("Bullets: " + bulletPressed.bullet);
-            SelectedBullets[activeIndex].updateValues(bulletPressed.bullet);
+            bullets.Add(bulletPressed.bullet);
         }
-        
 
-        activeIndex = -1;
     }
 
     public void ButtonPressed(int index)
     {
-        for (int i = 0; i < SelectedBullets.Length; i++)
+        if (bullets[index] != null)
         {
-            SelectedBullets[i].icon.color = Color.white;
+            bullets.RemoveAt(index);
         }
-
-        activeIndex = index;
-        SelectedBullets[activeIndex].icon.color = Color.grey;
     }
 
     public void goToNextLevel()
@@ -81,9 +93,9 @@ public class BulletSelect : MonoBehaviour
         gameMode.bullets.Clear();
         for (int i = 0; i < SelectedBullets.Length; i++)
         {
-            if (SelectedBullets[i].bulletObj != null) {
+            if (bullets[i] != null) {
                 print("Index " + i);
-                gameMode.bullets.Add(SelectedBullets[i].bulletObj.gameObject);
+                gameMode.bullets.Add(bullets[i].gameObject);
             }
             
         }

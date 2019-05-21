@@ -16,9 +16,6 @@ public class SelectedBulletScript : MonoBehaviour
 
     public int index;
 
-    [HideInInspector]
-    public BulletParent bulletObj;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +26,16 @@ public class SelectedBulletScript : MonoBehaviour
         bulletName = GetComponentInChildren<TMP_Text>();
     }
 
+    public void clearValues()
+    {
+        icon.sprite = null;
+
+        bulletName.text = "None";
+
+        icon.color = Color.grey;
+
+    }
+
     public void updateValues(BulletParent bulletVal)
     {
         icon.sprite = bulletVal.icon;
@@ -36,8 +43,6 @@ public class SelectedBulletScript : MonoBehaviour
         bulletName.text = bulletVal.name;
 
         icon.color = Color.white;
-
-        bulletObj = bulletVal;
 
     }
 }

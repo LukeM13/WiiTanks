@@ -27,8 +27,15 @@ public class BulletManager : MonoBehaviour
 
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
 
-        bullets.AddRange(gameMode.bullets);
-        print(bullets[0]);
+        if (gameMode.bullets[0] == null)
+        {
+            bullets.Add(testBullet);
+        }
+        else
+        {
+            bullets.AddRange(gameMode.bullets);
+            print(bullets[0]);
+        }
     }
 
     void Update()
