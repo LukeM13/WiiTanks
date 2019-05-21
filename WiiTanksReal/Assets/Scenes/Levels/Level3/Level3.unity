@@ -355,6 +355,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[2].tankInfo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[2].tankInfo.Array.data[0].type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81c14bc0a444a24f985d2933091abf1, type: 3}
 --- !u!1001 &138398224
