@@ -48,8 +48,6 @@ public class Smart_AI : AIParent
     {
         GameObject player = getClosestPlayer();
 
-
-
         //this gets the distance that the nav agent has left to move on its path
         float dist = navAgent.remainingDistance;
         //this checks to see if we have finished running our path
