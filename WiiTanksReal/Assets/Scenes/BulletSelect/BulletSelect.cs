@@ -19,9 +19,9 @@ public class BulletSelect : MonoBehaviour
 
     public Object bulletButtonPrefab;
 
-    public GameObject[] SelectedBullets;
+    public SelectedBulletScript[] SelectedBullets;
 
-    public int activeIndex;
+    private int activeIndex = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -43,26 +43,50 @@ public class BulletSelect : MonoBehaviour
             tankValues.updateValues(tank.type, tank.number);
         }
 
-        for (int i = 0; i < gameMode.numUnlockedBullets; i++)
-        {
-            //create a new tankUI object for the all the tanks in the level
-            GameObject bulletButton = (GameObject)Instantiate(bulletButtonPrefab);
-            //set this transform the the tankholder so that it aligns with everything
-            bulletButton.transform.SetParent(tankHolder.transform, false);
-            //bullet
-            //print()
-        }
+        //for (int i = 0; i < gameMode.numUnlockedBullets; i++)
+        //{
+        //    //create a new tankUI object for the all the tanks in the level
+        //    GameObject bulletButton = (GameObject)Instantiate(bulletButtonPrefab);
+        //    //set this transform the the tankholder so that it aligns with everything
+        //    bulletButton.transform.SetParent(tankHolder.transform, false);
+        //}
 
+    }
+
+    public void inputBullet(BulletPrefabScript bulletPressed)
+    {
+        if (activeIndex != -1)
+        {
+            print("Bullets: " + bulletPressed.bullet);
+            SelectedBullets[activeIndex].updateValues(bulletPressed.bullet);
+        }
+        
+
+        activeIndex = -1;
     }
 
     public void ButtonPressed(int index)
     {
+        for (int i = 0; i < SelectedBullets.Length; i++)
+        {
+            SelectedBullets[i].icon.color = Color.white;
+        }
+
         activeIndex = index;
+        SelectedBullets[activeIndex].icon.color = Color.grey;
     }
 
     public void goToNextLevel()
     {
-        //gameMode.SelectedBullets = 
+        gameMode.bullets.Clear();
+        for (int i = 0; i < SelectedBullets.Length; i++)
+        {
+            if (SelectedBullets[i].bulletObj != null) {
+                print("Index " + i);
+                gameMode.bullets.Add(SelectedBullets[i].bulletObj.gameObject);
+            }
+            
+        }
         gameMode.nextLevel();
     }
 }

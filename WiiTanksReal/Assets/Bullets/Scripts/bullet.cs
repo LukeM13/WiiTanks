@@ -6,12 +6,6 @@ using UnityEngine;
 public class bullet : BulletParent
 {
 
-
-    // Start is called before the first frame update
-    protected void Start()
-    {
-    }
-
     // Update is called once per frame
     protected void Update()
     {
