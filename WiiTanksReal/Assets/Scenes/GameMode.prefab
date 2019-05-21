@@ -41,8 +41,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64855a4bc68fa4b9586d2365fb651ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bulletSelectScene: {fileID: 102900000, guid: e5120d5e804fd4801aee07ad2413a0b1, type: 3}
   gameScenes:
   - scene: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
@@ -51,6 +51,69 @@ MonoBehaviour:
     - type: 0
       number: 1
   - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 946de7dfc95184eac8e0f64ee12fdcd3, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 4b7c4acba65f94324b280b8999a63fe9, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 6bdcbac2dadcc4cb5b0f0379df7b659d, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 1569eed32d45c4a37aea7a89f70f81a3, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 2186b1c70db4b4b28b5ff0e999d5d151, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: a496331ba1f4546e6857d43a8e075b28, type: 3}
+    sceneImage: {fileID: 0}
+    tankInfo:
+    - type: 0
+      number: 1
+    - type: 1
+      number: 1
+  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0

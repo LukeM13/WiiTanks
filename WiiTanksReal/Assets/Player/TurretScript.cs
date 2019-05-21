@@ -44,16 +44,16 @@ public class TurretScript : MonoBehaviour
             
             if (Physics.Raycast(transform.position, (transform.position - new Vector3(hit.point.x, transform.position.y, hit.point.z)) * -1, out lineHit, 1000))
             {
-                if (lineHit.collider.gameObject.tag.Equals("Boundry"))
-                {
-                    mouseLine.enabled = true;
-                    mouseLine.SetPosition(0, transform.position);
-                    mouseLine.SetPosition(1, new Vector3(hit.point.x, transform.position.y, hit.point.z));
-                }
-                else
-                {
-                    mouseLine.enabled = false;
-                }
+                //if (lineHit.collider.gameObject.tag.Equals("Boundry"))
+                //{
+                //    mouseLine.enabled = true;
+                //    mouseLine.SetPosition(0, transform.position);
+                //    mouseLine.SetPosition(1, new Vector3(hit.point.x, transform.position.y, hit.point.z));
+                //}
+                //else
+                //{
+                //    mouseLine.enabled = false;
+                //}
 
             }
             */

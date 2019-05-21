@@ -39,7 +39,7 @@ public class BulletManager : MonoBehaviour
     }
 
     void Update()
-    { 
+    {
         if (Input.GetButtonDown("Inventory1"))
         {
             activeBullet = 0;

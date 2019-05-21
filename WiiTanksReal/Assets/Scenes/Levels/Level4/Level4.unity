@@ -3347,6 +3347,267 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1773336656}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1995188994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3998069462909541236, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_Name
+      value: GameMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 547.9326
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 340.2653
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -200.03339
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[3].tankInfo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[4].tankInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[5].tankInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[6].tankInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[7].tankInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[8].tankInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[9].tankInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[3].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 946de7dfc95184eac8e0f64ee12fdcd3,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[3].tankInfo.Array.data[0].number
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[3].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[3].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[4].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[4].tankInfo.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[4].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[4].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[5].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[5].tankInfo.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[5].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[5].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[6].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[6].tankInfo.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[6].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[6].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[7].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[7].tankInfo.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[7].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[7].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[8].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[8].tankInfo.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[8].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[8].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[9].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[9].tankInfo.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[9].tankInfo.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[9].tankInfo.Array.data[1].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[3].tankInfo.Array.data[0].type
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f81c14bc0a444a24f985d2933091abf1, type: 3}
 --- !u!1001 &1995755478
 PrefabInstance:
   m_ObjectHideFlags: 0
