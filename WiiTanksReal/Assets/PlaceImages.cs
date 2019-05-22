@@ -13,7 +13,7 @@ public class PlaceImages : MonoBehaviour
         layout = GetComponent<VerticalLayoutGroup>();
         bulletManager = GameObject.FindGameObjectWithTag("Player").GetComponent<BulletManager>();
         print("createds");
-        foreach (BulletParent b in bulletManager.bullets)
+        foreach (Object b in bulletManager.bullets)
         {
             
             GameObject obj = (GameObject)Instantiate(icon);
@@ -21,14 +21,9 @@ public class PlaceImages : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        print("awake");
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
 }
