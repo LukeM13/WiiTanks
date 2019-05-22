@@ -12,11 +12,18 @@ public class PlaceImages : MonoBehaviour
     {
         layout = GetComponent<VerticalLayoutGroup>();
         bulletManager = GameObject.FindGameObjectWithTag("Player").GetComponent<BulletManager>();
-        foreach(BulletParent b in bulletManager.bullets)
+        print("createds");
+        foreach (BulletParent b in bulletManager.bullets)
         {
+            
             GameObject obj = (GameObject)Instantiate(icon);
             obj.transform.SetParent(layout.transform, false);
         }
+    }
+
+    private void Awake()
+    {
+        print("awake");
     }
 
     // Update is called once per frame
