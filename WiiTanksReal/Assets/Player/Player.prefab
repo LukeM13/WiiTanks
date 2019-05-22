@@ -86,6 +86,8 @@ MonoBehaviour:
     type: 3}
   rocket: {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
   activeBullet: 0
+  stopTime: 0.2
+  shouldMove: 1
 --- !u!54 &759642655
 Rigidbody:
   m_ObjectHideFlags: 0
