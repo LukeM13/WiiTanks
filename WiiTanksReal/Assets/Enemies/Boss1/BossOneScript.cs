@@ -53,7 +53,7 @@ public class BossOneScript : AIParent, Damageable
     {
         damage = 100;
     }
-    public void destroy
+    public void destroy(float damage)
     {
         damage = 0;
     }
