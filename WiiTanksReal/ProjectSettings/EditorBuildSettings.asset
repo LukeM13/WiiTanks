@@ -22,8 +22,53 @@ EditorBuildSettings:
     guid: 4fb001bfb55704ed484f27e7e73b8572
   - enabled: 1
     path: Assets/Scenes/Levels/Level4/Level4.unity
-    guid: 72b657e8126834978a2c4612680375db
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    guid: 946de7dfc95184eac8e0f64ee12fdcd3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level5/Level5.unity
+    guid: 4b7c4acba65f94324b280b8999a63fe9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level6/Level6.unity
+    guid: 6bdcbac2dadcc4cb5b0f0379df7b659d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level7/Level7.unity
+    guid: 975c3229e13d44d6d804af4a0cbb8ce8
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level8/Level8.unity
+    guid: 1569eed32d45c4a37aea7a89f70f81a3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level9/Level9.unity
+    guid: 2186b1c70db4b4b28b5ff0e999d5d151
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level10/Level10.unity
+    guid: a496331ba1f4546e6857d43a8e075b28
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level11/Level11.unity
+    guid: 2c6006617fd6e46cc9f07858fad7a3fd
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level12/Level12.unity
+    guid: 0f0e4421028384e2e8cca76dfed9c100
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level13/Level13.unity
+    guid: 01601623ee6bf449ea421c8bbf76262f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level14/Level14.unity
+    guid: 86abb333f56914ad0a72bc5f6df8c6f5
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level15/Level15.unity
+    guid: 65e02f6fe728c4a6499a48219651abcc
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level16/Level16.unity
+    guid: 03a24c31b066c437eaab9503289231aa
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level17/Level17.unity
+    guid: 51e3c21d9d7354d6dbac3a18cbb0af44
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level18/Level18.unity
+    guid: a764df3cece7e416496002d35cc99a25
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level19/Level19.unity
+    guid: 316713d2cc8f8400b859ff233f641dca
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level20/Level20.unity
+    guid: afbb566d1dc7f44e1b703cf6e88a2bc7
   m_configObjects: {}

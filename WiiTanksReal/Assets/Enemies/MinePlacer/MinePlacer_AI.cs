@@ -39,6 +39,7 @@ public class MinePlacer_AI : AIParent
     // Update is called once per frame
     void Update()
     {
+        player = getClosestPlayer();
         //this gets the distance that the nav agent has left to move on its path
         float dist = navAgent.remainingDistance;
         //this checks to see if we have finished running our path
@@ -63,15 +64,8 @@ public class MinePlacer_AI : AIParent
             minePlaceTimer += Time.deltaTime;
         }
 
-        activeIndex = indexOfSeenPlayer();
-
-        if (activeIndex != -1)
+        if (canSeePlayer(player))
         {
-            if (smoothTurret < 1)
-            {
-                smoothTurret += Time.deltaTime * snappingSpeed;
-            }
-            turretTransform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z)), smoothTurret);
             if (currentBurstTime >= burstTime)
             {
                 Instantiate(bullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
@@ -83,10 +77,6 @@ public class MinePlacer_AI : AIParent
             }
 
         }
-        else
-        {
-            smoothTurret = 0;
-        }
-
+        turretTransform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
     }
 }

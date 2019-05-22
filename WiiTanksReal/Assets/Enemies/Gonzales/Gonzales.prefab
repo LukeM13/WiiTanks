@@ -57,14 +57,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8417255215733536206}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.962, z: 0}
   m_LocalScale: {x: 50.000046, y: 50.00003, z: 50.00003}
   m_Children:
   - {fileID: 8417255215849857648}
   m_Father: {fileID: 8417255216441611278}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8417255215733536205
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -286,6 +286,7 @@ MonoBehaviour:
   snappingSpeed: 1
   burstAmount: 2
   burstTime: 2
+  followSpeed: 0
   bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   spawnPoint: {fileID: 8417255215849857648}
 --- !u!195 &8417255216378763072
