@@ -51,6 +51,10 @@ public class BossOneScript : AIParent, Damageable
 
     public void damage(float damage, GameObject other)
     {
-        
+        damage = 100;
+    }
+    public void destroy
+    {
+        damage = 0;
     }
 }
