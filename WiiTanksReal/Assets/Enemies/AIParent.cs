@@ -19,6 +19,8 @@ public abstract class AIParent : MonoBehaviour, Damageable
 
     private SceneController sceneController;
 
+    protected GameObject player;
+
     public void Start()
     {
         //gets the navmeshagent

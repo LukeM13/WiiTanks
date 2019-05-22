@@ -22,6 +22,8 @@ public class BulletManager : MonoBehaviour
 
     private float stopTimer;
 
+    private List<GameObject> bulletsInWorld = new List<GameObject>();
+
     private GameMode gameMode;
 
     [HideInInspector]
@@ -67,11 +69,23 @@ public class BulletManager : MonoBehaviour
         //this shoots the bullet
         if (Input.GetButtonDown("Fire1"))
         {
-            shouldMove = false;
-            stopTimer = 0;
-            Instantiate(bullets[activeBullet], spawnPoint.position, spawnPoint.rotation);
-            //play particle effect
-            turretSmoke.Play();
+            for (int i = 0; i < bulletsInWorld.Count; i++)
+            {
+                if (!bulletsInWorld[i].active)
+                {
+                    bulletsInWorld.RemoveAt(i);
+                }
+            }
+            print(bulletsInWorld.Count);
+            if (bulletsInWorld.Count <= 5)
+            {
+                shouldMove = false;
+                stopTimer = 0;
+                bulletsInWorld.Add((GameObject)Instantiate(bullets[activeBullet], spawnPoint.position, spawnPoint.rotation));
+                //play particle effect
+                turretSmoke.Play();
+
+            }
         }
 
         //this places a mine

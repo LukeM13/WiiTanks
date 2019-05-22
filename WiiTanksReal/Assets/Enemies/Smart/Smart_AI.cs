@@ -33,7 +33,6 @@ public class Smart_AI : AIParent
     public int RaysToShoot;
 
     private Vector3 aimingAngle;
-    private GameObject player;
 
     private GameObject[] boundry;
 
