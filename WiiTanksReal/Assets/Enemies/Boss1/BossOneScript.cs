@@ -24,7 +24,7 @@ public class BossOneScript : AIParent
     // Update is called once per frame
     void Update()
     {
-        
+
         turret.transform.rotation = Quaternion.LookRotation(transform.position - new Vector3(getClosestPlayer().transform.position.x, transform.position.y, getClosestPlayer().transform.position.z));
         if (canSeePlayer(getClosestPlayer()))
         {
