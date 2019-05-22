@@ -18,7 +18,14 @@ public class BulletManager : MonoBehaviour
 
     public int activeBullet = 0;
 
+    public float stopTime;
+
+    private float stopTimer;
+
     private GameMode gameMode;
+
+    [HideInInspector]
+    public bool shouldMove = true;
 
     private void Start()
     {
@@ -42,6 +49,7 @@ public class BulletManager : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetButtonDown("Inventory1"))
         {
             activeBullet = 0;
@@ -59,7 +67,8 @@ public class BulletManager : MonoBehaviour
         //this shoots the bullet
         if (Input.GetButtonDown("Fire1"))
         {
-
+            shouldMove = false;
+            stopTimer = 0;
             Instantiate(bullets[activeBullet], spawnPoint.position, spawnPoint.rotation);
             //play particle effect
             turretSmoke.Play();
@@ -68,8 +77,18 @@ public class BulletManager : MonoBehaviour
         //this places a mine
         if (Input.GetButtonDown("Fire2"))
         {
+            shouldMove = false;
+            stopTimer = 0;
             Instantiate(mine, gameObject.transform.position, gameObject.transform.rotation);
         }
 
+        if (stopTime <= stopTimer)
+        {
+            shouldMove = true;
+        }
+        else
+        {
+            stopTimer += Time.deltaTime;
+        }
     }
 }

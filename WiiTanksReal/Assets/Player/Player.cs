@@ -40,8 +40,10 @@ public class Player : MonoBehaviour, Damageable
         //set the value for moving left and right
         vertValue = Input.GetAxis("Vertical");
 
-        moveTank();
-        turnTank();
+        if (bulletManager.shouldMove) {
+            moveTank();
+            turnTank();
+        }
 
 
     }
