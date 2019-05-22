@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2526,6 +2526,35 @@ PrefabInstance:
     - target: {fileID: 1600695258537497667, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759642655, guid: fb3764028c0f149e39de49176e464c4f, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6754417495740214508, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211187929985927, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211187929985927, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211187929985927, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211187929985927, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9090,71 +9119,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23176e4be07c9784daba41813fa9bb10, type: 3}
---- !u!1 &1939071968
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3998069462909541236, guid: f81c14bc0a444a24f985d2933091abf1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1648950908}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1939071970}
-  - component: {fileID: 1939071969}
-  m_Layer: 0
-  m_Name: GameMode
-  m_TagString: GameMode
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1939071969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1648950908}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939071968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64855a4bc68fa4b9586d2365fb651ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSelectScene: {fileID: 102900000, guid: e5120d5e804fd4801aee07ad2413a0b1, type: 3}
-  gameScenes:
-  - scene: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    sceneImage: {fileID: 0}
-    tankInfo:
-    - type: 0
-      number: 1
-  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
-    sceneImage: {fileID: 0}
-    tankInfo:
-    - type: 0
-      number: 1
-    - type: 1
-      number: 1
-  bullets:
-  - {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
-  - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
-  - {fileID: 7642116510868501542, guid: 94e184c4a24cb415a9b9783bcb60bf2f, type: 3}
-  numUnlockedBullets: 1
---- !u!4 &1939071970
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3998069462909541238, guid: f81c14bc0a444a24f985d2933091abf1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1648950908}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939071968}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.10753, y: 11.726898, z: -12.810776}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1946697361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1673300855570002316, guid: 23176e4be07c9784daba41813fa9bb10,
