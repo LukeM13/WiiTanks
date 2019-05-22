@@ -43,8 +43,8 @@ public class GameMode : MonoBehaviour
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
 
-    [SerializeField]
-    public List<UnityEngine.Object> bullets = new List<UnityEngine.Object>();
+    [HideInInspector]
+    public List<UnityEngine.Object> bullets;
 
     [HideInInspector]
     public int numUnlockedBullets = 1;

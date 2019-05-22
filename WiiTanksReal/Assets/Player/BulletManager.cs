@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletManager : MonoBehaviour
 {
 
-    [HideInInspector]
+    //[HideInInspector]
     public List<Object> bullets;
 
     public Object mine;
@@ -27,12 +27,21 @@ public class BulletManager : MonoBehaviour
 
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
 
-        bullets.AddRange(gameMode.bullets);
-
+        if (gameMode.bullets.Count <= 0)
+        {
+            print("No Bullets");
+            bullets.Add(testBullet);
+        }
+        else
+        {
+            print(gameMode.bullets.Count);
+            bullets.AddRange(gameMode.bullets);
+            print("Added bullets");
+        }
     }
 
     void Update()
-    { 
+    {
         if (Input.GetButtonDown("Inventory1"))
         {
             activeBullet = 0;
