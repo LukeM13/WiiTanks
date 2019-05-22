@@ -85,7 +85,7 @@ MonoBehaviour:
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572, type: 3}
+  - scene: {fileID: 102900000, guid: 975c3229e13d44d6d804af4a0cbb8ce8, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
@@ -120,63 +120,63 @@ MonoBehaviour:
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 0f0e4421028384e2e8cca76dfed9c100, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 01601623ee6bf449ea421c8bbf76262f, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 86abb333f56914ad0a72bc5f6df8c6f5, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 65e02f6fe728c4a6499a48219651abcc, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 03a24c31b066c437eaab9503289231aa, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 51e3c21d9d7354d6dbac3a18cbb0af44, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: a764df3cece7e416496002d35cc99a25, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: 316713d2cc8f8400b859ff233f641dca, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
       number: 1
     - type: 1
       number: 1
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+  - scene: {fileID: 102900000, guid: afbb566d1dc7f44e1b703cf6e88a2bc7, type: 3}
     sceneImage: {fileID: 0}
     tankInfo:
     - type: 0
