@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossOneScript : AIParent, Damageable
+public class BossOneScript : AIParent
 {
 
     public float followSpeed;
@@ -20,12 +20,6 @@ public class BossOneScript : AIParent, Damageable
     [SerializeField]
     public GameObject[] spawnPoints;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -49,12 +43,4 @@ public class BossOneScript : AIParent, Damageable
 
     }
 
-    public void damage(float damage, GameObject other)
-    {
-        damage = 100;
-    }
-    public void destroy
-    {
-        damage = 0;
-    }
 }

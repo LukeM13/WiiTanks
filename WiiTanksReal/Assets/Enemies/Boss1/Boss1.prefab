@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 8694215846437679121}
   m_Layer: 0
   m_Name: Boss1
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cecb255040ddb54daff532154a6fbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticle: {fileID: 0}
+  deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
+    type: 3}
   health: 1
   followSpeed: 1
   turret: {fileID: 3463754497974311281}
