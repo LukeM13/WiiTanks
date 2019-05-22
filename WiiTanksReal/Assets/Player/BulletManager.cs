@@ -71,13 +71,13 @@ public class BulletManager : MonoBehaviour
         {
             for (int i = 0; i < bulletsInWorld.Count; i++)
             {
-                if (!bulletsInWorld[i].active)
+                if (bulletsInWorld[i] == null)
                 {
                     bulletsInWorld.RemoveAt(i);
                 }
             }
             print(bulletsInWorld.Count);
-            if (bulletsInWorld.Count <= 5)
+            if (bulletsInWorld.Count < 5)
             {
                 shouldMove = false;
                 stopTimer = 0;
