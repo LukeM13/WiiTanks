@@ -51,20 +51,20 @@ public class Basic_AI : AIParent
         }
 
         turretTransform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-            //Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(transform.position - new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z)), Mathf.Sin(Time.time));
+        //Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(transform.position - new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z)), Mathf.Sin(Time.time));
 
-        
 
-        if (currentBurstTime >= burstTime)
+        if (canSeePlayer(player))
         {
-            Instantiate(bullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
-            currentBurstTime = 0;
-        }
-        else
-        {
-            currentBurstTime += Time.deltaTime;
+            if (currentBurstTime >= burstTime)
+            {
+                Instantiate(bullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                currentBurstTime = 0;
+            }
+            else
+            {
+                currentBurstTime += Time.deltaTime;
+            }
         }
     }
-
-
 }
