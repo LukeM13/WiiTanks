@@ -83,6 +83,22 @@ public class Player : MonoBehaviour, Damageable
         {
             goingRight = false;
         }
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            goingUp = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            goingUp = false;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            goingRight = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            goingRight = false;
+        }
 
         //all these get the direction of movement and get an angle from it
         if (goingUp && goingRight) {
