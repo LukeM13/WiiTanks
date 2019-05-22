@@ -11,7 +11,7 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: chokePoint
+  - name: Mine
     cost: 3
   - name: 
     cost: 1

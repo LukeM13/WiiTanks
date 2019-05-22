@@ -136,7 +136,7 @@ MonoBehaviour:
   health: 100
   followSpeed: 1
   turret: {fileID: 3463754497974311281}
-  shootSpeed: 3
+  shootSpeed: 2
   bulletType: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc,
     type: 3}
   spawnPoints:

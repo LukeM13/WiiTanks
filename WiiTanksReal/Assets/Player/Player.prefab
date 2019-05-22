@@ -52,7 +52,7 @@ MonoBehaviour:
   health: 1
   deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
     type: 3}
-  speed: 6
+  speed: 5.5
   bodyTransform: {fileID: 4454017616904524116}
 --- !u!65 &1600695258537497679
 BoxCollider:
