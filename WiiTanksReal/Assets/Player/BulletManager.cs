@@ -76,7 +76,6 @@ public class BulletManager : MonoBehaviour
                     bulletsInWorld.RemoveAt(i);
                 }
             }
-            print(bulletsInWorld.Count);
             if (bulletsInWorld.Count < 5)
             {
                 shouldMove = false;
