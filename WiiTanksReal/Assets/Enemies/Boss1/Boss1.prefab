@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 7344961552377845956, guid: b9712e534a4f6eb47a771641d30680d5,
     type: 3}
-  health: 1
+  health: 100
   followSpeed: 1
   turret: {fileID: 3463754497974311281}
   shootSpeed: 3
@@ -358,11 +358,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2959807772585208653}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
-        type: 3}
-      propertyPath: m_Name
-      value: Boss1Turret
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -417,6 +412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss1Turret
       objectReference: {fileID: 0}
     - target: {fileID: -113181020801827196, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
         type: 3}
