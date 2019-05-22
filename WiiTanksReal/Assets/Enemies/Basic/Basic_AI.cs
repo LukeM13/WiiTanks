@@ -29,8 +29,6 @@ public class Basic_AI : AIParent
     //the spawn point for the bullets
     public Transform spawnPoint;
 
-    private GameObject player;
-
     // Update is called once per frame
     void Update()
     {
