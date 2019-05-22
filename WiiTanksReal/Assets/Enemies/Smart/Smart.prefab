@@ -5195,7 +5195,7 @@ MonoBehaviour:
   turretTransform: {fileID: 7275300756778839962}
   followSpeed: 1
   burstAmount: 1
-  burstTime: 2
+  shootTime: 2
   bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   spawnPoint: {fileID: 7275300755180378596}
   minDistFromPlayer: 14.4

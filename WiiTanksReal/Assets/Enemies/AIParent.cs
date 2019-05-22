@@ -30,7 +30,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
     }
 
     //we we are hit with a bullet
-    public void damage(float damage, GameObject other)
+    public virtual void damage(float damage, GameObject other)
     {
         health -= damage;
 

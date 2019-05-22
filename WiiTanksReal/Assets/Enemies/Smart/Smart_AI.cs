@@ -18,7 +18,7 @@ public class Smart_AI : AIParent
     //the timer for moving the turret
     private float smoothTurret = 0;
     //the time between each burst of bullets
-    public float ShootTime;
+    public float shootTime;
     //the timer for the bursts
     private float currentShootTime;
     [Header("Shooting")]
@@ -33,6 +33,7 @@ public class Smart_AI : AIParent
     public int RaysToShoot;
 
     private Vector3 aimingAngle;
+    private GameObject player;
 
     private GameObject[] boundry;
 
@@ -46,81 +47,76 @@ public class Smart_AI : AIParent
     // Update is called once per frame
     void Update()
     {
-        GameObject player = getClosestPlayer();
+        player = getClosestPlayer();
 
-        //this gets the distance that the nav agent has left to move on its path
-        float dist = navAgent.remainingDistance;
-        //this checks to see if we have finished running our path
-        if (dist != Mathf.Infinity && ((navAgent.pathStatus == NavMeshPathStatus.PathComplete && navAgent.remainingDistance == 0) || navAgent.remainingDistance < navAgent.radius))
+
+        if (canSeePlayer(player))
         {
-            //this gets a random location on the mesh and moves to it
-            Vector3 randomDirection = Random.insideUnitSphere * 20;
-            randomDirection += transform.position;
-            NavMeshHit hit;
-            NavMesh.SamplePosition(randomDirection, out hit, 20, 1);
-            Vector3 finalPosition = hit.position;
-            navAgent.SetDestination(finalPosition);
+            aimingAngle = player.transform.position - transform.position;
         }
 
-        
-        //if (Vector3.Distance(transform.position, player.transform.position) < minDistFromPlayer)
-        //{
-            if (canSeePlayer(player))
-            {
-                aimingAngle = player.transform.position - transform.position;
-            } else
-            {
-                float minDist = float.MaxValue;
-                for (int i = 0; i < RaysToShoot; i++)
-                {
-                    Vector3 dir = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + ((360 / RaysToShoot) * i),
-                        transform.rotation.z) * transform.forward;
-                    RaycastHit hit;
-                    if (Physics.Raycast(transform.position, dir, out hit))
-                    {
-                        Debug.DrawLine(transform.position, hit.point, Color.red);
-                        if (hit.collider.gameObject.tag.Equals("Player"))
-                        {
-                            aimingAngle = dir;
-                            break;
-                        }
-                        if (hit.collider.gameObject.tag.Equals("Wall") || hit.collider.gameObject.tag.Equals("Boundry"))
-                        {
-                            if (Vector3.Distance(hit.point, player.transform.position) < minDist)
-                            {
-
-                                aimingAngle = dir;
-                                minDist = Vector3.Distance(hit.point, player.transform.position);
-
-                            }
-                            RaycastHit reflectHit;
-                            Vector3 reflectDir = Vector3.Reflect(dir, hit.normal);
-                            if (Physics.Raycast(hit.point, reflectDir, out reflectHit))
-                            {
-                                if (Vector3.Distance(reflectHit.point, player.transform.position) < minDist)
-                                {
-                                    aimingAngle = dir;
-                                    minDist = Vector3.Distance(reflectHit.point, player.transform.position);
-                                }
-                                Debug.DrawLine(hit.point, reflectHit.point, Color.black);
-                            }
-                        }
-
-                    }
-                }
-            //}
+        turretTransform.rotation = Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(aimingAngle), currentShootTime/shootTime);
+        if (smoothTurret < 1)
+        {
+            smoothTurret += Time.deltaTime * followSpeed;
         }
 
-        turretTransform.rotation = Quaternion.LookRotation(aimingAngle);
-
-        if (currentShootTime >= ShootTime)
+        if (currentShootTime >= shootTime)
         {
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             currentShootTime = 0;
+            aimingAngle = bestAngle();
         }
         else
         {
             currentShootTime += Time.deltaTime;
         }
+    }
+
+    private Vector3 bestAngle()
+    {
+        Vector3 angle = transform.forward;
+        float minDist = float.MaxValue;
+        for (int i = 0; i < RaysToShoot; i++)
+        {
+            Vector3 dir = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + ((360 / RaysToShoot) * i),
+                transform.rotation.z) * transform.forward;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, dir, out hit))
+            {
+                Debug.DrawLine(transform.position, hit.point, Color.red);
+                if (hit.collider.gameObject.tag.Equals("Player"))
+                {
+                    angle = dir;
+                    smoothTurret = 0;
+                    break;
+                }
+                if (hit.collider.gameObject.tag.Equals("Wall") || hit.collider.gameObject.tag.Equals("Boundry"))
+                {
+                    if (Vector3.Distance(hit.point, player.transform.position) < minDist)
+                    {
+
+                        angle = dir;
+                        smoothTurret = 0;
+                        minDist = Vector3.Distance(hit.point, player.transform.position);
+
+                    }
+                    RaycastHit reflectHit;
+                    Vector3 reflectDir = Vector3.Reflect(dir, hit.normal);
+                    if (Physics.Raycast(hit.point, reflectDir, out reflectHit))
+                    {
+                        if (Vector3.Distance(reflectHit.point, player.transform.position) < minDist)
+                        {
+                            angle = dir;
+                            smoothTurret = 0;
+                            minDist = Vector3.Distance(reflectHit.point, player.transform.position);
+                        }
+                        Debug.DrawLine(hit.point, reflectHit.point, Color.black);
+                    }
+                }
+
+            }
+        }
+        return angle;
     }
 }

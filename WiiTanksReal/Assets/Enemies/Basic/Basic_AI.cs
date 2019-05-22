@@ -20,6 +20,8 @@ public class Basic_AI : AIParent
     private float smoothTurret = 0;
     //the time between each burst of bullets
     public float burstTime;
+    [Range(0, 2)]
+    public float followSpeed;
     //the timer for the bursts
     private float currentBurstTime;
     //the bullet that this tank shoot
@@ -27,10 +29,13 @@ public class Basic_AI : AIParent
     //the spawn point for the bullets
     public Transform spawnPoint;
 
+    private GameObject player;
 
     // Update is called once per frame
     void Update()
     {
+
+        player = getClosestPlayer();
         //this gets the distance that the nav agent has left to move on its path
         float dist = navAgent.remainingDistance;
         //this checks to see if we have finished running our path
@@ -45,29 +50,20 @@ public class Basic_AI : AIParent
             navAgent.SetDestination(finalPosition);
         }
 
-        activeIndex = indexOfSeenPlayer();
+        turretTransform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+            //Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(transform.position - new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z)), Mathf.Sin(Time.time));
 
-        if (activeIndex != -1)
+        
+
+        if (currentBurstTime >= burstTime)
         {
-            if (smoothTurret < 1)
-            {
-                smoothTurret += Time.deltaTime * snappingSpeed;
-            }
-            turretTransform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(transform.position - new Vector3(players[activeIndex].transform.position.x, transform.position.y, players[activeIndex].transform.position.z)), smoothTurret);
-            if (currentBurstTime >= burstTime)
-            {
-                Instantiate(bullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
-                currentBurstTime = 0;
-            } else
-            {
-                currentBurstTime += Time.deltaTime;
-            }
-            
-        } else
-        {
-            smoothTurret = 0;
+            Instantiate(bullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            currentBurstTime = 0;
         }
-
+        else
+        {
+            currentBurstTime += Time.deltaTime;
+        }
     }
 
 
