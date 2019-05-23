@@ -11,7 +11,7 @@ public class BulletManager : MonoBehaviour
     public Object mine;
 
     public Transform spawnPoint;
-    public Object testBullet;
+    public Object Bullet;
     public Object rocket;
    //public Object mine;
     private ParticleSystem turretSmoke;
@@ -39,7 +39,7 @@ public class BulletManager : MonoBehaviour
         if (gameMode.bullets.Count <= 0)
         {
             print("No Bullets");
-            bullets.Add(testBullet);
+            bullets.Add(Bullet);
         }
         else
         {

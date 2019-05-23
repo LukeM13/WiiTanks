@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64855a4bc68fa4b9586d2365fb651ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSelectScene: {fileID: 102900000, guid: e5120d5e804fd4801aee07ad2413a0b1, type: 3}
+  bulletSelectScene: {fileID: 102900000, guid: 2b0b1e3c62a652f4f8e1dca97868448b, type: 3}
   gameScenes:
   - scene: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
     sceneImage: {fileID: 0}
@@ -188,3 +188,4 @@ MonoBehaviour:
   - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
   - {fileID: 7642116510868501542, guid: 94e184c4a24cb415a9b9783bcb60bf2f, type: 3}
   numUnlockedBullets: 1
+  currentLevel: 2

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour, Damageable
     private float horzValue = 0.0f;
     private Vector3 moveDir = Vector3.zero;
 
+    private SceneController sceneController;
 
     private float angle = 0;
 
@@ -30,6 +31,8 @@ public class Player : MonoBehaviour, Damageable
         rigid = GetComponent<Rigidbody>();
         //This is what spawns the bullets and keeps track of bullet data
         bulletManager = GetComponent<BulletManager>();
+
+        sceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
     }
 
     // Update is called once per frame
@@ -68,6 +71,7 @@ public class Player : MonoBehaviour, Damageable
     void turnTank()
     {
 
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
         {
             goingUp = true;
@@ -99,7 +103,13 @@ public class Player : MonoBehaviour, Damageable
         {
             goingRight = false;
         }
+        if (goingUp || goingRight)
+        {
+            bodyTransform.rotation = Quaternion.LookRotation(moveDir);
+        }
 
+
+        /*
         //all these get the direction of movement and get an angle from it
         if (goingUp && goingRight) {
             if (horzValue > 0 && vertValue > 0)
@@ -167,6 +177,7 @@ public class Player : MonoBehaviour, Damageable
                 bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 0), Mathf.Abs(vertValue)), 0);
             }
         }
+        */
     }
 
 
@@ -179,6 +190,7 @@ public class Player : MonoBehaviour, Damageable
         {
             Instantiate(deathParticle, transform.position, transform.rotation);
             deathParticle.Play();
+            sceneController.playerKill();
             Destroy(gameObject);
         }
     }
