@@ -71,6 +71,7 @@ public class Player : MonoBehaviour, Damageable
     void turnTank()
     {
 
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
         {
             goingUp = true;
@@ -102,7 +103,13 @@ public class Player : MonoBehaviour, Damageable
         {
             goingRight = false;
         }
+        if (goingUp || goingRight)
+        {
+            bodyTransform.rotation = Quaternion.LookRotation(moveDir);
+        }
 
+
+        /*
         //all these get the direction of movement and get an angle from it
         if (goingUp && goingRight) {
             if (horzValue > 0 && vertValue > 0)
@@ -170,6 +177,7 @@ public class Player : MonoBehaviour, Damageable
                 bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 0), Mathf.Abs(vertValue)), 0);
             }
         }
+        */
     }
 
 

@@ -14,6 +14,8 @@ public class TransitionSceneControllerScript : MonoBehaviour
 
     private GameMode gameMode;
 
+    public Animator transition;
+
     private float timer;
 
     // Start is called before the first frame update
@@ -36,9 +38,16 @@ public class TransitionSceneControllerScript : MonoBehaviour
     {
         if (timer >= screenTime)
         {
-            gameMode.nextLevel();
+            StartCoroutine(SceneFadeToTransition());
         }
 
         timer += Time.deltaTime;
+    }
+
+    IEnumerator SceneFadeToTransition()
+    {
+        transition.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(.79f);
+        gameMode.nextLevel();
     }
 }
