@@ -9,6 +9,8 @@ public class Mine : MonoBehaviour
     public Object explosion;
     private bool isSpawnedInPlayer = true;
     private NavMeshAgent obstacle;
+    public float lifeTime;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,12 @@ public class Mine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (timer >= lifeTime)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+        timer += Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider col)

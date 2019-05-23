@@ -17,7 +17,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
 
     public float health;
 
-    private SceneController sceneController;
+    private static SceneController sceneController;
 
     protected GameObject player;
 
@@ -29,6 +29,7 @@ public abstract class AIParent : MonoBehaviour, Damageable
         players = GameObject.FindGameObjectsWithTag("Player");
 
         sceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
+        print(sceneController.isActiveAndEnabled);
     }
 
     //we we are hit with a bullet
@@ -48,9 +49,10 @@ public abstract class AIParent : MonoBehaviour, Damageable
         //makes a particle effect that hides the tank disappearing
         Instantiate(deathParticle, transform.position, transform.rotation);
         deathParticle.Play();
+        print(sceneController);
         Destroy(gameObject);
         sceneController.tankKill();
-        print("Kill tank");
+
     }
 
     protected int indexOfSeenPlayer()

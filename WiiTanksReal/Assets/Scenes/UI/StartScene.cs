@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class StartScene : MonoBehaviour
 {
     public AudioClip audio;
+
+    private GameMode gameMode;
     // Start is called before the first frame update
     public void play()
     {
+        gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
         DontDestroyOnLoad(audio);
         GetComponent<AudioSource>().Play();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        gameMode.loadBulletSelect();
         Debug.Log("next scene");
     }
     public void music()

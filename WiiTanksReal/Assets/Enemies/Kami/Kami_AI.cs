@@ -8,15 +8,6 @@ public class Kami_AI : AIParent
 
     public Object explosion;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //gets the navmeshagent
-        navAgent = GetComponent<NavMeshAgent>();
-        //get all players in the world
-        players = GameObject.FindGameObjectsWithTag("Player");
-
-    }
 
     // Update is called once per frame
     void Update()

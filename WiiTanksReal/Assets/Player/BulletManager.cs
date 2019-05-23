@@ -38,14 +38,11 @@ public class BulletManager : MonoBehaviour
 
         if (gameMode.bullets.Count <= 0)
         {
-            print("No Bullets");
             bullets.Add(Bullet);
         }
         else
         {
-            print(gameMode.bullets.Count);
             bullets.AddRange(gameMode.bullets);
-            print("Added bullets");
         }
     }
 

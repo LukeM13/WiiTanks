@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 6840018327403222325, guid: fd735288639019848a9bfb3767741811,
     type: 3}
+  lifeTime: 5
 --- !u!54 &1244129773115595816
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -101,6 +102,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5999835948228564970}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 8129bfd332aa70743a446997e6e769c5,
+        type: 3}
+      propertyPath: m_Name
+      value: BaseMine
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8129bfd332aa70743a446997e6e769c5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8129bfd332aa70743a446997e6e769c5,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8129bfd332aa70743a446997e6e769c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -155,21 +171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 8129bfd332aa70743a446997e6e769c5,
-        type: 3}
-      propertyPath: m_Name
-      value: BaseMine
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 8129bfd332aa70743a446997e6e769c5,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 8129bfd332aa70743a446997e6e769c5,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 8129bfd332aa70743a446997e6e769c5,
         type: 3}
