@@ -27,6 +27,8 @@ public class Smart_AI : AIParent
     //the spawn point for the bullets
     public Transform spawnPoint;
 
+    private Player playerMovement;
+
     [Header("Brains Stuff")]
     [Range(1,20)]
     public float minDistFromPlayer;
@@ -40,18 +42,25 @@ public class Smart_AI : AIParent
     {
         base.Start();
 
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerMovement = player.GetComponent<Player>();
+
         boundry = GameObject.FindGameObjectsWithTag("Boundry");
+
     }
 
     // Update is called once per frame
     void Update()
-    {
-        player = getClosestPlayer();
+    { 
 
 
         if (canSeePlayer(player))
         {
-            aimingAngle = player.transform.position - transform.position;
+            aimingAngle = (player.transform.position + (playerMovement.moveDir * 2)) - transform.position;
+        }
+        else
+        {
+            aimingAngle = bestAngle();
         }
 
         turretTransform.rotation = Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(aimingAngle), currentShootTime/shootTime);
@@ -62,9 +71,10 @@ public class Smart_AI : AIParent
 
         if (currentShootTime >= shootTime)
         {
+
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             currentShootTime = 0;
-            aimingAngle = bestAngle();
+
         }
         else
         {

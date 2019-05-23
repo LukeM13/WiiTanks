@@ -46,7 +46,7 @@ public class SceneController : MonoBehaviour
         transition.SetTrigger("FadeOut");
         print("fade out");
         yield return new WaitForSeconds(.8f);
-        gameMode.loadBulletSelect();
+        gameMode.loadTransitionScene();
     }
 
     IEnumerator SceneFadeToRestart()

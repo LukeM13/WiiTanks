@@ -38,7 +38,7 @@ public struct LevelData
 public class GameMode : MonoBehaviour
 {
 
-    public SceneAsset bulletSelectScene;
+    public SceneAsset transitionScene;
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
@@ -67,23 +67,22 @@ public class GameMode : MonoBehaviour
         }
     }
 
-
-    public void loadBulletSelect()
+    public void loadTransitionScene()
     {
         currentLevel++;
         numUnlockedBullets = Mathf.Clamp(numUnlockedBullets + 1, 1, bullets.Count);
-        SceneManager.LoadScene(bulletSelectScene.name);
+        SceneManager.LoadScene(transitionScene.name);
     }
 
-    public void loadTransitionScene()
+    public void loadFirstLevel()
     {
-
+        SceneManager.LoadScene(gameScenes[0].scene.name);
     }
 
     public void restartLevel()
     {
         
-        SceneManager.LoadScene(bulletSelectScene.name);
+        SceneManager.LoadScene(transitionScene.name);
     }
 
     public void nextLevel()

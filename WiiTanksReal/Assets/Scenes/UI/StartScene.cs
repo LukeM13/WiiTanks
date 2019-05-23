@@ -14,7 +14,7 @@ public class StartScene : MonoBehaviour
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
         DontDestroyOnLoad(audio);
         GetComponent<AudioSource>().Play();
-        gameMode.loadBulletSelect();
+        gameMode.loadFirstLevel();
         Debug.Log("next scene");
     }
     public void music()

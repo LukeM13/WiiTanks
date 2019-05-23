@@ -16,7 +16,8 @@ public class Player : MonoBehaviour, Damageable
     public Transform bodyTransform;
     private float vertValue = 0.0f;
     private float horzValue = 0.0f;
-    private Vector3 moveDir = Vector3.zero;
+    [HideInInspector]
+    public Vector3 moveDir = Vector3.zero;
 
     private SceneController sceneController;
 
