@@ -18,6 +18,7 @@ public class Player : MonoBehaviour, Damageable
     private float horzValue = 0.0f;
     private Vector3 moveDir = Vector3.zero;
 
+    private SceneController sceneController;
 
     private float angle = 0;
 
@@ -30,6 +31,8 @@ public class Player : MonoBehaviour, Damageable
         rigid = GetComponent<Rigidbody>();
         //This is what spawns the bullets and keeps track of bullet data
         bulletManager = GetComponent<BulletManager>();
+
+        sceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
     }
 
     // Update is called once per frame
@@ -179,6 +182,7 @@ public class Player : MonoBehaviour, Damageable
         {
             Instantiate(deathParticle, transform.position, transform.rotation);
             deathParticle.Play();
+            sceneController.playerKill();
             Destroy(gameObject);
         }
     }

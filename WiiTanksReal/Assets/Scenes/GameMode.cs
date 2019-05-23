@@ -48,8 +48,8 @@ public class GameMode : MonoBehaviour
 
     [HideInInspector]
     public int numUnlockedBullets = 1;
-
-    private static int currentLevel = 0;
+    [HideInInspector]
+    public int currentLevel = 0;
 
     void Awake()
     {
@@ -67,17 +67,22 @@ public class GameMode : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
 
     public void loadBulletSelect()
     {
         currentLevel++;
         numUnlockedBullets = Mathf.Clamp(numUnlockedBullets + 1, 1, bullets.Count);
+        SceneManager.LoadScene(bulletSelectScene.name);
+    }
+
+    public void loadTransitionScene()
+    {
+
+    }
+
+    public void restartLevel()
+    {
+        
         SceneManager.LoadScene(bulletSelectScene.name);
     }
 
