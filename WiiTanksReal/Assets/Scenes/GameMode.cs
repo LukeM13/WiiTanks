@@ -48,7 +48,7 @@ public class GameMode : MonoBehaviour
 
     [HideInInspector]
     public int numUnlockedBullets = 1;
-    [HideInInspector]
+
     public int currentLevel = 0;
 
     void Awake()

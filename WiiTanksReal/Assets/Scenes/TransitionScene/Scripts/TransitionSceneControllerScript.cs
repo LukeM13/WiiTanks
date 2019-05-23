@@ -47,7 +47,7 @@ public class TransitionSceneControllerScript : MonoBehaviour
     IEnumerator SceneFadeToTransition()
     {
         transition.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(.79f);
         gameMode.nextLevel();
     }
 }
