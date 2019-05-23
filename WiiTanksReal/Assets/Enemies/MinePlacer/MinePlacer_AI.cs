@@ -27,7 +27,7 @@ public class MinePlacer_AI : AIParent
     //the mine to place
     public Object mine;
 
-    [Range(1, 10)]
+    public float mineTimeMin;
     public float mineTimeMax;
     private float mineTime;
     private float minePlaceTimer;
@@ -57,7 +57,7 @@ public class MinePlacer_AI : AIParent
         if (minePlaceTimer >= mineTime)
         {
             Instantiate(mine, transform.position, transform.rotation);
-            mineTime = Random.Range(1, mineTimeMax);
+            mineTime = Random.Range(mineTimeMin, mineTimeMax);
             minePlaceTimer = 0;
         } else
         {
