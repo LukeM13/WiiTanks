@@ -188,4 +188,4 @@ MonoBehaviour:
   - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
   - {fileID: 7642116510868501542, guid: 94e184c4a24cb415a9b9783bcb60bf2f, type: 3}
   numUnlockedBullets: 1
-  currentLevel: -1
+  currentLevel: 13
