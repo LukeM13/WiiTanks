@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758662054467283245}
   m_LocalRotation: {x: -0, y: -0.9396927, z: -0, w: -0.3420201}
-  m_LocalPosition: {x: 2.057, y: 0.25899994, z: -2.447}
+  m_LocalPosition: {x: 2.402, y: 0.25899994, z: -2.858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2959807772585208653}
@@ -107,7 +107,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 3
-  m_Speed: 2
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -116,7 +116,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.09
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &8922140093868641847
@@ -136,13 +136,15 @@ MonoBehaviour:
   health: 100
   followSpeed: 1
   turret: {fileID: 3463754497974311281}
-  shootSpeed: 2
-  bulletType: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc,
+  shootSpeed: 1
+  bulletType: {fileID: 8784304225504927248, guid: 0a9cc3efd015447a28e0f71a1295e5dd,
+    type: 3}
+  sideBullets: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc,
     type: 3}
   spawnPoints:
-  - {fileID: 8704393548015936940}
-  - {fileID: 1758662054467283245}
   - {fileID: 5094624970190403918}
+  - {fileID: 1758662054467283245}
+  midSpawnPoint: {fileID: 8704393548015936940}
 --- !u!54 &5610952570476667660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,7 +159,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &8694215846437679121
 BoxCollider:
@@ -230,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5094624970190403918}
   m_LocalRotation: {x: -0, y: -0.9396927, z: -0, w: 0.3420201}
-  m_LocalPosition: {x: -2.087, y: 0.25100005, z: -2.495}
+  m_LocalPosition: {x: -2.46, y: 0.25100005, z: -2.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2959807772585208653}
@@ -260,7 +262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704393548015936940}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.25899994, z: -3.212}
+  m_LocalPosition: {x: 0, y: 0.25899994, z: -3.739}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2959807772585208653}
@@ -358,6 +360,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2959807772585208653}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss1Turret
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -412,11 +419,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
-        type: 3}
-      propertyPath: m_Name
-      value: Boss1Turret
       objectReference: {fileID: 0}
     - target: {fileID: -113181020801827196, guid: 11863d8b9f7b6a345b3e112a3d5fdce7,
         type: 3}
