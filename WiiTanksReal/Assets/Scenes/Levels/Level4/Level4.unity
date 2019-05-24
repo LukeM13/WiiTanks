@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1192,11 +1192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
-        type: 3}
-      propertyPath: speed
-      value: 5.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2231211187929985927, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1216,6 +1211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
+        type: 3}
+      propertyPath: speed
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3764028c0f149e39de49176e464c4f, type: 3}
@@ -2925,7 +2925,7 @@ PrefabInstance:
     - target: {fileID: 3536010098071916634, guid: 9615e2ce30916ee4e9ec863199c9daaf,
         type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9615e2ce30916ee4e9ec863199c9daaf, type: 3}
@@ -2999,7 +2999,7 @@ PrefabInstance:
     - target: {fileID: 3536010098071916634, guid: 9615e2ce30916ee4e9ec863199c9daaf,
         type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9615e2ce30916ee4e9ec863199c9daaf, type: 3}
@@ -3479,7 +3479,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[3].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 946de7dfc95184eac8e0f64ee12fdcd3,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -3500,7 +3500,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[4].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -3521,7 +3521,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[5].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -3542,7 +3542,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[6].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -3563,7 +3563,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[7].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -3584,7 +3584,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[8].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -3605,7 +3605,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[9].scene
-      value:
+      value: 
       objectReference: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
