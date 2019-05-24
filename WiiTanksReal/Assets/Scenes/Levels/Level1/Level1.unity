@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44464546, g: 0.49416524, b: 0.57341653, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427135, b: 0.56452316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1109,6 +1109,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3138735029290746441, guid: 918f080748bb540478b551758b31c8a2,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 918f080748bb540478b551758b31c8a2, type: 3}
 --- !u!1001 &987358546
@@ -1782,6 +1787,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundry
       objectReference: {fileID: 0}
+    - target: {fileID: 508383112976213374, guid: ec52d8700e4374848979bb3e6fff4951,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boundry
+      objectReference: {fileID: 0}
     - target: {fileID: 2798073533632065886, guid: ec52d8700e4374848979bb3e6fff4951,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1858,11 +1868,6 @@ PrefabInstance:
       value: Boundry
       objectReference: {fileID: 0}
     - target: {fileID: 286373650530066515, guid: ec52d8700e4374848979bb3e6fff4951,
-        type: 3}
-      propertyPath: m_TagString
-      value: Boundry
-      objectReference: {fileID: 0}
-    - target: {fileID: 508383112976213374, guid: ec52d8700e4374848979bb3e6fff4951,
         type: 3}
       propertyPath: m_TagString
       value: Boundry
