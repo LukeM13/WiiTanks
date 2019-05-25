@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossOneScript : AIParent
 {
@@ -19,15 +20,32 @@ public class BossOneScript : AIParent
 
     public Object sideBullets;
 
+    private float defaultHealth;
+
+    private Slider healthBar;
+
     [SerializeField]
     public GameObject[] spawnPoints;
 
     public GameObject midSpawnPoint;
 
+    private Canvas canvas;
+
+    public void Start()
+    {
+        base.Start();
+        defaultHealth = health;
+
+        healthBar = GetComponentInChildren<Slider>();
+
+        canvas = GetComponentInChildren<Canvas>();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+
         navAgent.SetDestination(getClosestPlayer().transform.position);
         turret.transform.rotation = Quaternion.LookRotation(transform.position - new Vector3(getClosestPlayer().transform.position.x, transform.position.y, getClosestPlayer().transform.position.z));
         if (canSeePlayer(getClosestPlayer()))
@@ -44,8 +62,20 @@ public class BossOneScript : AIParent
             }
             shootTimer += Time.deltaTime;
         }
-
-
+        canvas.transform.rotation = Quaternion.LookRotation(Camera.main.transform.position);
+        
     }
+    //we we are hit with a bullet
+    public override void damage(float damage, GameObject other)
+    {
+        health -= damage;
 
+        healthBar.value = health / defaultHealth;
+
+        if (health <= 0)
+        {
+            death();
+
+        }
+    }
 }
