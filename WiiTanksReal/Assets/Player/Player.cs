@@ -106,79 +106,8 @@ public class Player : MonoBehaviour, Damageable
         }
         if (goingUp || goingRight)
         {
-            bodyTransform.rotation = Quaternion.LookRotation(moveDir);
+            bodyTransform.rotation = Quaternion.LookRotation(moveDir * Time.deltaTime * speed);
         }
-
-
-        /*
-        //all these get the direction of movement and get an angle from it
-        if (goingUp && goingRight) {
-            if (horzValue > 0 && vertValue > 0)
-            {
-                
-                if (horzValue == 1) {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.Lerp(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 45), vertValue), 0);
-                } else
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.Lerp(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 45), horzValue), 0);
-                }
-            }
-            else if (horzValue > 0 && vertValue < 0)
-            {
-                if (horzValue == 1)
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 135), Mathf.Abs(vertValue)), 0);
-                }
-                else
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 135), Mathf.Abs(horzValue)), 0);
-                }
-            }
-            else if (horzValue < 0 && vertValue < 0)
-            {
-                if (horzValue == -1)
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 225), Mathf.Abs(vertValue)), 0);
-                }
-                else
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 225), Mathf.Abs(horzValue)), 0);
-                }
-            }
-            else if (horzValue < 0 && vertValue > 0)
-            {
-                if (horzValue == -1)
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 315), Mathf.Abs(vertValue)), 0);
-                }
-                else
-                {
-                    bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 315), Mathf.Abs(horzValue)), 0);
-                }
-            }
-        }
-        else if (goingRight)
-        {
-
-            if (Mathf.Abs(horzValue) == 1)
-            {
-                bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 90), Mathf.Abs(-1 + vertValue)), 0);
-            }
-            else
-            {
-                bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 90), Mathf.Abs(horzValue)), 0);
-            }
-        } else if (goingUp) {
-            if (Mathf.Abs(vertValue) == 1)
-            {
-                bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 0), Mathf.Abs(-1 + horzValue)), 0);
-            }
-            else
-            {
-                bodyTransform.rotation = Quaternion.Euler(0, Mathf.LerpAngle(bodyTransform.rotation.eulerAngles.y, getClosestAngle(bodyTransform.rotation.eulerAngles.y, 0), Mathf.Abs(vertValue)), 0);
-            }
-        }
-        */
     }
 
 

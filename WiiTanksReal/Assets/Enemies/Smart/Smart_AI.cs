@@ -93,7 +93,7 @@ public class Smart_AI : AIParent
             RaycastHit hit;
             if (Physics.Raycast(transform.position, dir, out hit))
             {
-                Debug.DrawLine(transform.position, hit.point, Color.red);
+                
                 if (hit.collider.gameObject.tag.Equals("Player"))
                 {
                     angle = dir;
@@ -102,14 +102,26 @@ public class Smart_AI : AIParent
                 }
                 if (hit.collider.gameObject.tag.Equals("Wall") || hit.collider.gameObject.tag.Equals("Boundry"))
                 {
-                    if (Vector3.Distance(hit.point, player.transform.position) < minDist)
-                    {
 
-                        angle = dir;
-                        smoothTurret = 0;
-                        minDist = Vector3.Distance(hit.point, player.transform.position);
+                    RaycastHit playerCheck;
+                    if (Physics.Raycast(hit.point, player.transform.position - hit.point, out playerCheck))
+                    {
+                        Debug.DrawLine(hit.point, playerCheck.point, Color.red);
+                        if (!playerCheck.collider.gameObject.tag.Equals("Wall"))
+                        {
+                            if (Vector3.Distance(hit.point, player.transform.position) < minDist)
+                            {
+                                print("draw line");
+                                
+                                angle = dir;
+                                smoothTurret = 0;
+                                minDist = Vector3.Distance(hit.point, player.transform.position);
+
+                            }
+                        }
 
                     }
+    
                     RaycastHit reflectHit;
                     Vector3 reflectDir = Vector3.Reflect(dir, hit.normal);
                     if (Physics.Raycast(hit.point, reflectDir, out reflectHit))
@@ -120,7 +132,7 @@ public class Smart_AI : AIParent
                             smoothTurret = 0;
                             minDist = Vector3.Distance(reflectHit.point, player.transform.position);
                         }
-                        Debug.DrawLine(hit.point, reflectHit.point, Color.black);
+                        //Debug.DrawLine(hit.point, reflectHit.point, Color.black);
                     }
                 }
 
