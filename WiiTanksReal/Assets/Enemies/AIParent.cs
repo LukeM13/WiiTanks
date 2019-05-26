@@ -51,7 +51,6 @@ public abstract class AIParent : MonoBehaviour, Damageable
         deathParticle.Play();
         print(sceneController);
         Destroy(gameObject);
-        sceneController.tankKill();
 
     }
 
