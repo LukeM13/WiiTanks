@@ -116,7 +116,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &3199311465200938045
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   shootTime: 2
   bullet: {fileID: 8784304225504927248, guid: 0a9cc3efd015447a28e0f71a1295e5dd, type: 3}
   spawnPoint: {fileID: 6935644875218989624}
-  minDistFromPlayer: 14.4
+  minDistFromPlayer: 20
   RaysToShoot: 80
 --- !u!1 &6935644873660711231
 GameObject:

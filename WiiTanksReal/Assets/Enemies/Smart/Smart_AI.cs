@@ -43,16 +43,32 @@ public class Smart_AI : AIParent
         base.Start();
 
         player = GameObject.FindGameObjectWithTag("Player");
+
         playerMovement = player.GetComponent<Player>();
 
         boundry = GameObject.FindGameObjectsWithTag("Boundry");
-
+        navAgent.SetDestination(player.transform.position);
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+        //this gets the distance that the nav agent has left to move on its path
+        float dist = navAgent.remainingDistance;
+        //this checks to see if we have finished running our path
+        if (Vector3.Distance(transform.position, player.transform.position) <= minDistFromPlayer)
+        {
 
+
+            navAgent.isStopped = true;
+            print("stopping " + navAgent.pathStatus);
+        } else
+        {
+
+            print("going to player " + navAgent.remainingDistance);
+            navAgent.isStopped = false;
+            navAgent.SetDestination(player.transform.position);
+        }
 
         if (canSeePlayer(player))
         {
@@ -106,7 +122,7 @@ public class Smart_AI : AIParent
                     RaycastHit playerCheck;
                     if (Physics.Raycast(hit.point, player.transform.position - hit.point, out playerCheck))
                     {
-                        Debug.DrawLine(hit.point, playerCheck.point, Color.red);
+                        //Debug.DrawLine(hit.point, playerCheck.point, Color.red);
                         if (!playerCheck.collider.gameObject.tag.Equals("Wall"))
                         {
                             if (Vector3.Distance(hit.point, player.transform.position) < minDist)

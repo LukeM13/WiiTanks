@@ -29,7 +29,6 @@ public abstract class AIParent : MonoBehaviour, Damageable
         players = GameObject.FindGameObjectsWithTag("Player");
 
         sceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
-        print(sceneController.isActiveAndEnabled);
     }
 
     //we we are hit with a bullet
@@ -51,7 +50,6 @@ public abstract class AIParent : MonoBehaviour, Damageable
         deathParticle.Play();
         print(sceneController);
         Destroy(gameObject);
-        sceneController.tankKill();
 
     }
 
