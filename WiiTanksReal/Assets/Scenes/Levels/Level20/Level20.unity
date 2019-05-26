@@ -610,7 +610,6 @@ PrefabInstance:
     - target: {fileID: 1673300855570002316, guid: 23176e4be07c9784daba41813fa9bb10,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-<<<<<<< HEAD
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 759642655, guid: fb3764028c0f149e39de49176e464c4f, type: 3}
@@ -641,19 +640,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 10
-=======
-      value: 89.998
-      objectReference: {fileID: 0}
-    - target: {fileID: 1673300855570002316, guid: 23176e4be07c9784daba41813fa9bb10,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 99.999916
-      objectReference: {fileID: 0}
-    - target: {fileID: 1673300855570002316, guid: 23176e4be07c9784daba41813fa9bb10,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 99.999916
->>>>>>> 811ee18bbef7e704ee05cb9570b92c4473f1da16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23176e4be07c9784daba41813fa9bb10, type: 3}
@@ -1957,7 +1943,7 @@ PrefabInstance:
     - target: {fileID: 3116551662154344594, guid: d24daa3e9f264dd43b266ce3b8254258,
         type: 3}
       propertyPath: tankToSpawn
-      value: 
+      value:
       objectReference: {fileID: 6935644873599485700, guid: 302760159fe0749e5b600df19d0c8237,
         type: 3}
     - target: {fileID: 1730765946966482878, guid: d24daa3e9f264dd43b266ce3b8254258,
@@ -2252,7 +2238,7 @@ PrefabInstance:
     - target: {fileID: 3116551662154344594, guid: d24daa3e9f264dd43b266ce3b8254258,
         type: 3}
       propertyPath: tankToSpawn
-      value: 
+      value:
       objectReference: {fileID: 8417255216378763084, guid: afee06646065f96458c951c806d09eb5,
         type: 3}
     - target: {fileID: 1730765946966482878, guid: d24daa3e9f264dd43b266ce3b8254258,
@@ -2534,7 +2520,7 @@ PrefabInstance:
     - target: {fileID: 3116551662154344594, guid: d24daa3e9f264dd43b266ce3b8254258,
         type: 3}
       propertyPath: tankToSpawn
-      value: 
+      value:
       objectReference: {fileID: 5997079787814215823, guid: 9615e2ce30916ee4e9ec863199c9daaf,
         type: 3}
     - target: {fileID: 1730765946966482878, guid: d24daa3e9f264dd43b266ce3b8254258,
@@ -3059,7 +3045,7 @@ PrefabInstance:
     - target: {fileID: 3116551662154344594, guid: d24daa3e9f264dd43b266ce3b8254258,
         type: 3}
       propertyPath: tankToSpawn
-      value: 
+      value:
       objectReference: {fileID: 2779163752168138660, guid: 8fe2f3e90c46eaf44a67dfa2e43d331d,
         type: 3}
     - target: {fileID: 1730765946966482878, guid: d24daa3e9f264dd43b266ce3b8254258,
