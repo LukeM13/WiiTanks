@@ -120,7 +120,6 @@ public class Player : MonoBehaviour, Damageable
         {
             Instantiate(deathParticle, transform.position, transform.rotation);
             deathParticle.Play();
-            sceneController.playerKill();
             Destroy(gameObject);
         }
     }
