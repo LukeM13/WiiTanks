@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Boss2Script : MonoBehaviour, Damageable
 {
 
-    public GameObject[] spawnPoint;
+    public GameObject spawnPoint;
 
-    public GameObject[] tanksToSpawn;
+    public GameObject tankToSpawn;
 
     public float waveTime;
 
@@ -57,10 +57,8 @@ public class Boss2Script : MonoBehaviour, Damageable
 
     private void spawnWave()
     {
-        for (int i = 0; i < spawnPoint.Length; i++)
-        {
-            Instantiate(tanksToSpawn[Random.Range(0, tanksToSpawn.Length)], spawnPoint[i].transform.position, spawnPoint[i].transform.rotation);
-        }
+
+        Instantiate(tankToSpawn, spawnPoint.transform.position, spawnPoint.transform.rotation);
     }
 
     public void damage(float damage, GameObject other)
