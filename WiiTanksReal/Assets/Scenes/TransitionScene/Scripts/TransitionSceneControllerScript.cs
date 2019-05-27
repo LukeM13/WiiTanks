@@ -23,14 +23,8 @@ public class TransitionSceneControllerScript : MonoBehaviour
     {
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
 
-        int count = 0;
-        for (int i = 0; i < gameMode.getNextLevelInfo().tankInfo.Count; i++)
-        {
-            count += gameMode.getNextLevelInfo().tankInfo[i].number;
-        }
-
         missionText.text = "Mission: " + (gameMode.currentLevel + 1);
-        enemyTanksText.text = "Enemy Tanks: " + count;
+        enemyTanksText.text = "Enemy Tanks: " + gameMode.getNextLevelInfo().numberOfTanks;
     }
 
     // Update is called once per frame
