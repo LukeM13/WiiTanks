@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TankUIScript : MonoBehaviour
 {
-
+    /*
     private TankType type;
 
     private string count;
@@ -32,4 +32,5 @@ public class TankUIScript : MonoBehaviour
         name.SetText(tt.ToString());
         tankCount.SetText(count);
     }
+    */
 }
