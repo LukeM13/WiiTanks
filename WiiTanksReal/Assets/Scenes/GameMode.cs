@@ -1,28 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
-
-[Serializable]
-public enum TankType
-{
-    basic,
-    Rocket,
-    gonzales,
-    Mineplacer,
-    kami,
-}
-[Serializable]
-public struct TankData
-{
-    [SerializeField]
-    public TankType type;
-    [SerializeField]
-    public int number;
-}
 
 [Serializable]
 public struct LevelData
@@ -32,7 +14,7 @@ public struct LevelData
     [SerializeField]
     public Image sceneImage;
     [SerializeField]
-    public List<TankData> tankInfo;
+    public int numberOfTanks;
 }
 
 public class GameMode : MonoBehaviour
@@ -49,7 +31,7 @@ public class GameMode : MonoBehaviour
     [HideInInspector]
     public int numUnlockedBullets = 1;
 
-    public int currentLevel;
+    public int currentLevel = -1;
 
     void Awake()
     {
@@ -72,11 +54,6 @@ public class GameMode : MonoBehaviour
         currentLevel++;
         numUnlockedBullets = Mathf.Clamp(numUnlockedBullets + 1, 1, bullets.Count);
         SceneManager.LoadScene(transitionScene.name);
-    }
-
-    public void loadFirstLevel()
-    {
-        SceneManager.LoadScene(gameScenes[0].scene.name);
     }
 
     public void restartLevel()

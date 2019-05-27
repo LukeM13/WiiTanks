@@ -61,11 +61,11 @@ public class Smart_AI : AIParent
 
 
             navAgent.isStopped = true;
-            print("stopping " + navAgent.pathStatus);
+            
         } else
         {
 
-            print("going to player " + navAgent.remainingDistance);
+           
             navAgent.isStopped = false;
             navAgent.SetDestination(player.transform.position);
         }

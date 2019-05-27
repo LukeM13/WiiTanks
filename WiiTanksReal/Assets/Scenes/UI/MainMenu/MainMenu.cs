@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
         DontDestroyOnLoad(GetComponent<AudioSource>());
-        gameMode.loadFirstLevel();
+        gameMode.loadTransitionScene();
         Debug.Log("next scene");
     }
 

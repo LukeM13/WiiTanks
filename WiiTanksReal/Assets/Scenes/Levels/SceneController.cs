@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SceneController : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class SceneController : MonoBehaviour
     GameMode gameMode;
 
     private int numberOfAI;
+
+    public TMP_Text missionText;
+    public TMP_Text tankNumber;
 
     private Animator transition;
     
@@ -19,12 +23,15 @@ public class SceneController : MonoBehaviour
         gameMode = GameObject.FindWithTag("GameMode").GetComponent<GameMode>();
 
         transition = GetComponentInChildren<Animator>();
+
+        missionText.text = "Mission  " + (gameMode.currentLevel + 1);
     }
 
     // Update is called once per frame
     void Update()
     {
         numberOfAI = GameObject.FindGameObjectsWithTag("Tank").Length;
+        tankNumber.text = "x " + numberOfAI;
         if (numberOfAI <= 0)
         {
             StartCoroutine(SceneFadeToTransition());
