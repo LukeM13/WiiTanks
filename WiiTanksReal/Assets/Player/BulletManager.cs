@@ -36,31 +36,11 @@ public class BulletManager : MonoBehaviour
 
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
 
-        if (gameMode.bullets.Count <= 0)
-        {
-            bullets.Add(Bullet);
-        }
-        else
-        {
-            bullets.AddRange(gameMode.bullets);
-        }
     }
 
     void Update()
     {
-
-        if (Input.GetButtonDown("Inventory1"))
-        {
-            activeBullet = 0;
-        }
-        if (Input.GetButtonDown("Inventory2"))
-        {
-            activeBullet = 1;
-        }
-        if (Input.GetButtonDown("Inventory3"))
-        {
-            activeBullet = 2;
-        }
+    
 
 
         //this shoots the bullet
@@ -77,7 +57,7 @@ public class BulletManager : MonoBehaviour
             {
                 shouldMove = false;
                 stopTimer = 0;
-                bulletsInWorld.Add((GameObject)Instantiate(bullets[activeBullet], spawnPoint.position, spawnPoint.rotation));
+                bulletsInWorld.Add((GameObject)Instantiate(Bullet, spawnPoint.position, spawnPoint.rotation));
                 //play particle effect
                 turretSmoke.Play();
 

@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000000, guid: 2ec92e19898ac47c19160439d79f46e0,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1434,43 +1434,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: bullets.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: bullets.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: bullets.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: bullets.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: gameScenes.Array.data[0].scene
-      value: 
-      objectReference: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab,
-        type: 3}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: gameScenes.Array.data[0].numberOfTanks
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
-        type: 3}
-      propertyPath: gameScenes.Array.data[1].scene
-      value: 
-      objectReference: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81c14bc0a444a24f985d2933091abf1, type: 3}
 --- !u!1001 &1434554819
@@ -1808,6 +1771,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 903103465613076076, guid: ec52d8700e4374848979bb3e6fff4951,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3260296778085021791, guid: ec52d8700e4374848979bb3e6fff4951,
         type: 3}
       propertyPath: m_IsActive
@@ -1822,11 +1790,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 903103465613076076, guid: ec52d8700e4374848979bb3e6fff4951,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4861816537100305022, guid: ec52d8700e4374848979bb3e6fff4951,
         type: 3}

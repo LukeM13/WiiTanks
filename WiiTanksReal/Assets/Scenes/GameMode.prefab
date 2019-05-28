@@ -105,9 +105,6 @@ MonoBehaviour:
   - scene: Level20
     sceneImage: {fileID: 0}
     numberOfTanks: 3
-  bullets:
-  - {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
-  - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}
-  - {fileID: 7642116510868501542, guid: 94e184c4a24cb415a9b9783bcb60bf2f, type: 3}
+  bullets: []
   numUnlockedBullets: 1
   currentLevel: -1
