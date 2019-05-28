@@ -1,16 +1,17 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
-using System;
+
 
 [Serializable]
 public struct LevelData
 {
     [SerializeField]
-    public SceneAsset scene;
+    public String scene;
     [SerializeField]
     public Image sceneImage;
     [SerializeField]
@@ -20,7 +21,7 @@ public struct LevelData
 public class GameMode : MonoBehaviour
 {
 
-    public SceneAsset transitionScene;
+    public String transitionScene;
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
@@ -53,23 +54,23 @@ public class GameMode : MonoBehaviour
     {
         currentLevel++;
         numUnlockedBullets = Mathf.Clamp(numUnlockedBullets + 1, 1, bullets.Count);
-        SceneManager.LoadScene(transitionScene.name);
+        SceneManager.LoadScene(transitionScene);
     }
 
     public void restartLevel()
     {
         
-        SceneManager.LoadScene(transitionScene.name);
+        SceneManager.LoadScene(transitionScene);
     }
 
     public void nextLevel()
     { 
-        SceneManager.LoadScene(gameScenes[currentLevel].scene.name);
+        SceneManager.LoadScene(gameScenes[currentLevel].scene);
     }
 
     public LevelData getNextLevelInfo ()
     {
-        return gameScenes[currentLevel + 1];
+        return gameScenes[currentLevel];
     }
 
 }

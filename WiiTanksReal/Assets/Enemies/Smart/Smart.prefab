@@ -5199,7 +5199,7 @@ MonoBehaviour:
   bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   spawnPoint: {fileID: 7275300755180378596}
   minDistFromPlayer: 14.4
-  RaysToShoot: 16
+  RaysToShoot: 80
 --- !u!1 &7275300756877060835
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BulletSelect/BulletSelectScene.unity
     guid: e5120d5e804fd4801aee07ad2413a0b1
   - enabled: 1
-    path: Assets/Scenes/TransitionScene/TransistionScene.unity
+    path: Assets/Scenes/TransitionScene/TransitionScene.unity
     guid: 2b0b1e3c62a652f4f8e1dca97868448b
   - enabled: 1
     path: Assets/Scenes/Levels/Level1/Level1.unity

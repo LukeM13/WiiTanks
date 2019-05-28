@@ -12,8 +12,6 @@ public class StartScene : MonoBehaviour
     public void play()
     {
         gameMode = GameObject.FindGameObjectWithTag("GameMode").GetComponent<GameMode>();
-        DontDestroyOnLoad(audio);
-        GetComponent<AudioSource>().Play();
         gameMode.loadTransitionScene();
         Debug.Log("next scene");
     }
