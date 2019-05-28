@@ -70,7 +70,7 @@ public class GameMode : MonoBehaviour
 
     public LevelData getNextLevelInfo ()
     {
-        return gameScenes[currentLevel + 1];
+        return gameScenes[currentLevel];
     }
 
 }
