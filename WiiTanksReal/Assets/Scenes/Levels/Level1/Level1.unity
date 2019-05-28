@@ -940,7 +940,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: speed
@@ -950,8 +949,6 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
-=======
->>>>>>> 662c6c5a043ba8869d5ee506eca70411f284c6b1
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3764028c0f149e39de49176e464c4f, type: 3}
 --- !u!4 &672348886 stripped
@@ -1006,8 +1003,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1025,8 +1022,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -1434,22 +1431,22 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: bullets.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: bullets.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: bullets.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[0].scene
-      value: 
+      value:
       objectReference: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab,
         type: 3}
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
@@ -1460,7 +1457,7 @@ PrefabInstance:
     - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
         type: 3}
       propertyPath: gameScenes.Array.data[1].scene
-      value: 
+      value:
       objectReference: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822,
         type: 3}
     m_RemovedComponents: []
