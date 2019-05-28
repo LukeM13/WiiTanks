@@ -43,68 +43,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64855a4bc68fa4b9586d2365fb651ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionScene: {fileID: 102900000, guid: 2b0b1e3c62a652f4f8e1dca97868448b, type: 3}
+  transitionScene: TransitionScene
   gameScenes:
-  - scene: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+  - scene: Level1
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822, type: 3}
+    numberOfTanks: 1
+  - scene: Level2
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 4fb001bfb55704ed484f27e7e73b8572, type: 3}
+    numberOfTanks: 2
+  - scene: Level3
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 946de7dfc95184eac8e0f64ee12fdcd3, type: 3}
+    numberOfTanks: 2
+  - scene: Level4
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 4b7c4acba65f94324b280b8999a63fe9, type: 3}
+    numberOfTanks: 2
+  - scene: Level5
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 6bdcbac2dadcc4cb5b0f0379df7b659d, type: 3}
+    numberOfTanks: 4
+  - scene: Level6
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 975c3229e13d44d6d804af4a0cbb8ce8, type: 3}
+    numberOfTanks: 5
+  - scene: Level7
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 1569eed32d45c4a37aea7a89f70f81a3, type: 3}
+    numberOfTanks: 5
+  - scene: Level8
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 2186b1c70db4b4b28b5ff0e999d5d151, type: 3}
+    numberOfTanks: 8
+  - scene: Level9
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: a496331ba1f4546e6857d43a8e075b28, type: 3}
+    numberOfTanks: 4
+  - scene: Level10
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 2c6006617fd6e46cc9f07858fad7a3fd, type: 3}
+    numberOfTanks: 3
+  - scene: Level11
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 0f0e4421028384e2e8cca76dfed9c100, type: 3}
+    numberOfTanks: 6
+  - scene: Level12
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 01601623ee6bf449ea421c8bbf76262f, type: 3}
+    numberOfTanks: 4
+  - scene: Level13
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 86abb333f56914ad0a72bc5f6df8c6f5, type: 3}
+    numberOfTanks: 4
+  - scene: Level14
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 65e02f6fe728c4a6499a48219651abcc, type: 3}
+    numberOfTanks: 9
+  - scene: Level15
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 03a24c31b066c437eaab9503289231aa, type: 3}
+    numberOfTanks: 4
+  - scene: Level16
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 51e3c21d9d7354d6dbac3a18cbb0af44, type: 3}
+    numberOfTanks: 9
+  - scene: Level17
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: a764df3cece7e416496002d35cc99a25, type: 3}
+    numberOfTanks: 4
+  - scene: Level18
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: 316713d2cc8f8400b859ff233f641dca, type: 3}
+    numberOfTanks: 13
+  - scene: Level19
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
-  - scene: {fileID: 102900000, guid: afbb566d1dc7f44e1b703cf6e88a2bc7, type: 3}
+    numberOfTanks: 5
+  - scene: Level20
     sceneImage: {fileID: 0}
-    numberOfTanks: 0
+    numberOfTanks: 3
   bullets:
   - {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   - {fileID: 4584545420357745646, guid: 75a09325a394049f3b66b161435736b4, type: 3}

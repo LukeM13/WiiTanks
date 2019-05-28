@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -940,6 +940,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1600695258537497666, guid: fb3764028c0f149e39de49176e464c4f,
         type: 3}
       propertyPath: speed
@@ -949,6 +950,8 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 662c6c5a043ba8869d5ee506eca70411f284c6b1
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb3764028c0f149e39de49176e464c4f, type: 3}
 --- !u!4 &672348886 stripped
@@ -1443,6 +1446,23 @@ PrefabInstance:
       propertyPath: bullets.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[0].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab,
+        type: 3}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[0].numberOfTanks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998069462909541239, guid: f81c14bc0a444a24f985d2933091abf1,
+        type: 3}
+      propertyPath: gameScenes.Array.data[1].scene
+      value: 
+      objectReference: {fileID: 102900000, guid: cd4b25a19a14d71448344da3f4ebd822,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81c14bc0a444a24f985d2933091abf1, type: 3}
 --- !u!1001 &1434554819

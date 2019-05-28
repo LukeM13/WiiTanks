@@ -70,16 +70,9 @@ public class Smart_AI : AIParent
             navAgent.SetDestination(player.transform.position);
         }
 
-        if (canSeePlayer(player))
-        {
-            aimingAngle = (player.transform.position + (playerMovement.moveDir * 2)) - transform.position;
-        }
-        else
-        {
-            aimingAngle = bestAngle();
-        }
 
-        turretTransform.rotation = Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(aimingAngle), currentShootTime/shootTime);
+
+        
         if (smoothTurret < 1)
         {
             smoothTurret += Time.deltaTime * followSpeed;
@@ -87,7 +80,15 @@ public class Smart_AI : AIParent
 
         if (currentShootTime >= shootTime)
         {
-
+            if (canSeePlayer(player))
+            {
+                aimingAngle = (player.transform.position + (playerMovement.moveDir * 2)) - transform.position;
+            }
+            else
+            {
+                aimingAngle = bestAngle();
+            }
+            turretTransform.rotation = Quaternion.Lerp(turretTransform.rotation, Quaternion.LookRotation(aimingAngle), currentShootTime / shootTime);
             Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
             currentShootTime = 0;
 
@@ -110,47 +111,56 @@ public class Smart_AI : AIParent
             if (Physics.Raycast(transform.position, dir, out hit))
             {
                 
-                if (hit.collider.gameObject.tag.Equals("Player"))
-                {
-                    angle = dir;
-                    smoothTurret = 0;
-                    break;
-                }
-                if (hit.collider.gameObject.tag.Equals("Wall") || hit.collider.gameObject.tag.Equals("Boundry"))
-                {
 
-                    RaycastHit playerCheck;
-                    if (Physics.Raycast(hit.point, player.transform.position - hit.point, out playerCheck))
+                if (!hit.collider.gameObject.tag.Equals("Tank"))
+                {
+                    if (hit.collider.gameObject.tag.Equals("Player"))
                     {
-                        //Debug.DrawLine(hit.point, playerCheck.point, Color.red);
-                        if (!playerCheck.collider.gameObject.tag.Equals("Wall"))
+                        angle = dir;
+                        smoothTurret = 0;
+                        break;
+                    }
+                    else if (hit.collider.gameObject.tag.Equals("Wall") || hit.collider.gameObject.tag.Equals("Boundry"))
+                    {
+
+                        RaycastHit playerCheck;
+                        if (Physics.Raycast(hit.point, player.transform.position - hit.point, out playerCheck))
                         {
-                            if (Vector3.Distance(hit.point, player.transform.position) < minDist)
+                            //Debug.DrawLine(hit.point, playerCheck.point, Color.red);
+                            if (!playerCheck.collider.gameObject.tag.Equals("Wall"))
                             {
-                                print("draw line");
-                                
-                                angle = dir;
-                                smoothTurret = 0;
-                                minDist = Vector3.Distance(hit.point, player.transform.position);
+                                if (Vector3.Distance(hit.point, player.transform.position) < minDist)
+                                {
+                                    print("draw line");
+
+                                    angle = dir;
+                                    smoothTurret = 0;
+                                    minDist = Vector3.Distance(hit.point, player.transform.position);
+
+                                }
+                            }
+
+                        }
+
+                        RaycastHit reflectHit;
+                        Vector3 reflectDir = Vector3.Reflect(dir, hit.normal);
+                        if (Physics.Raycast(hit.point, reflectDir, out reflectHit))
+                        {
+                            if (!reflectHit.collider.gameObject.tag.Equals("Tank"))
+                            {
+                                if (Vector3.Distance(reflectHit.point, player.transform.position) < minDist)
+                                {
+                                    angle = dir;
+                                    smoothTurret = 0;
+                                    minDist = Vector3.Distance(reflectHit.point, player.transform.position);
+                                }
 
                             }
+                            //Debug.DrawLine(hit.point, reflectHit.point, Color.black);
                         }
-
-                    }
-    
-                    RaycastHit reflectHit;
-                    Vector3 reflectDir = Vector3.Reflect(dir, hit.normal);
-                    if (Physics.Raycast(hit.point, reflectDir, out reflectHit))
-                    {
-                        if (Vector3.Distance(reflectHit.point, player.transform.position) < minDist)
-                        {
-                            angle = dir;
-                            smoothTurret = 0;
-                            minDist = Vector3.Distance(reflectHit.point, player.transform.position);
-                        }
-                        //Debug.DrawLine(hit.point, reflectHit.point, Color.black);
                     }
                 }
+
 
             }
         }

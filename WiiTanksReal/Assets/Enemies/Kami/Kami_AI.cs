@@ -37,7 +37,7 @@ public class Kami_AI : AIParent
         }
     }
 
-    private void death()
+    private new void death()
     {
         Instantiate(explosion, transform.position, transform.rotation);
         base.death();
