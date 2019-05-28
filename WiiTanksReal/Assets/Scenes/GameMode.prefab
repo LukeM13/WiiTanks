@@ -101,7 +101,7 @@ MonoBehaviour:
     numberOfTanks: 13
   - scene: Level19
     sceneImage: {fileID: 0}
-    numberOfTanks: 5
+    numberOfTanks: 6
   - scene: Level20
     sceneImage: {fileID: 0}
     numberOfTanks: 3

@@ -101,7 +101,7 @@ MonoBehaviour:
   burstTime: 2
   bullet: {fileID: 7318862741418669022, guid: ac7e7f131ac3145a78efdca830af01dc, type: 3}
   mine: {fileID: 5999835948228564969, guid: 1b6ad96220def35449b2a844cb5c0e38, type: 3}
-  mineTimeMin: 3
+  mineTimeMin: 4
   mineTimeMax: 6
   spawnPoint: {fileID: 5123098077770404931}
 --- !u!195 &5123098076151177587
