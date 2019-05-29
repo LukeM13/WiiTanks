@@ -22,6 +22,8 @@ public class GameMode : MonoBehaviour
 {
 
     public String transitionScene;
+
+    public String gameOverScene;
     private static GameMode gameMode = null;
     [SerializeField]
     public List<LevelData> gameScenes = new List<LevelData>();
@@ -31,6 +33,8 @@ public class GameMode : MonoBehaviour
 
     [HideInInspector]
     public int numUnlockedBullets = 1;
+
+
 
     public int currentLevel = -1;
 
@@ -53,7 +57,12 @@ public class GameMode : MonoBehaviour
     public void loadTransitionScene()
     {
         currentLevel++;
+
         numUnlockedBullets = Mathf.Clamp(numUnlockedBullets + 1, 1, bullets.Count);
+        if (currentLevel >= gameScenes.Count)
+        {
+            SceneManager.LoadScene(gameOverScene);
+        }
         SceneManager.LoadScene(transitionScene);
     }
 
