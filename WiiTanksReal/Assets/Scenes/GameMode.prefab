@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionScene: TransitionScene
+  gameOverScene: GameOver
   gameScenes:
   - scene: Level1
     sceneImage: {fileID: 0}
@@ -107,4 +108,4 @@ MonoBehaviour:
     numberOfTanks: 3
   bullets: []
   numUnlockedBullets: 1
-  currentLevel: -1
+  currentLevel: 19

@@ -2049,7 +2049,7 @@ Transform:
   - {fileID: 1886617278}
   - {fileID: 1187572539}
   m_Father: {fileID: 1208283768}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &723357047
 NavMeshObstacle:
@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 785617402}
   m_Layer: 0
   m_Name: side wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2211,7 +2211,7 @@ Transform:
   - {fileID: 162243900}
   - {fileID: 321203068}
   m_Father: {fileID: 1208283768}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &785617401
 BoxCollider:
@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 814136872}
   m_Layer: 0
   m_Name: side wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2378,7 +2378,7 @@ Transform:
   - {fileID: 955949891}
   - {fileID: 403419237}
   m_Father: {fileID: 1208283768}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &814136872
 NavMeshObstacle:
@@ -2750,7 +2750,7 @@ Transform:
   - {fileID: 540525185}
   - {fileID: 1676806961}
   m_Father: {fileID: 1208283768}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &951188210
 NavMeshObstacle:
@@ -3194,7 +3194,7 @@ GameObject:
   - component: {fileID: 1096355321}
   m_Layer: 0
   m_Name: side wall (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3215,7 +3215,7 @@ Transform:
   - {fileID: 136066938}
   - {fileID: 1044781833}
   m_Father: {fileID: 1208283768}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1096355321
 NavMeshObstacle:
@@ -3725,7 +3725,7 @@ GameObject:
   - component: {fileID: 1187873426}
   m_Layer: 0
   m_Name: side wall (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3746,7 +3746,7 @@ Transform:
   - {fileID: 129793048}
   - {fileID: 483426856}
   m_Father: {fileID: 1208283768}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!208 &1187873426
 NavMeshObstacle:
@@ -3804,17 +3804,17 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 764103619}
-  - {fileID: 340878771}
-  - {fileID: 396753160}
-  - {fileID: 296650079}
-  - {fileID: 399402022}
   - {fileID: 723357046}
   - {fileID: 951188209}
   - {fileID: 785617400}
   - {fileID: 814136871}
   - {fileID: 1187873425}
   - {fileID: 1096355320}
+  - {fileID: 764103619}
+  - {fileID: 340878771}
+  - {fileID: 396753160}
+  - {fileID: 296650079}
+  - {fileID: 399402022}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
