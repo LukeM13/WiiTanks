@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5212754223058632956}
   - component: {fileID: 3822547727860693706}
   - component: {fileID: 7363635584085460531}
-  - component: {fileID: 949653236219852057}
   m_Layer: 0
   m_Name: BigSquarePrefab
   m_TagString: Wall
@@ -78,17 +77,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &949653236219852057
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9082693372795499247}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -5495902117074765545, guid: 26d622df54c69f149bb5e12750984a6d, type: 3}
