@@ -36,20 +36,21 @@ public class Player : MonoBehaviour, Damageable
         sceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FixedUpdate()
     {
         //set the value for moving up and down
         horzValue = Input.GetAxis("Horizontal");
         //set the value for moving left and right
         vertValue = Input.GetAxis("Vertical");
 
-        if (bulletManager.shouldMove) {
+        
+
+        if (bulletManager.shouldMove)
+        {
+            //print("Can Move: ");
             moveTank();
             turnTank();
         }
-
-
     }
 
     //moves tank
@@ -71,43 +72,35 @@ public class Player : MonoBehaviour, Damageable
     //turns tank
     void turnTank()
     {
-
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetButton("Up"))
         {
             goingUp = true;
-        } else if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+            //print("Going up = True");
+        } else
         {
             goingUp = false;
+            //print("Going up = false");
         }
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetButton("Right"))
         {
             goingRight = true;
+            //print("Going right = true");
         }
-        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        else
         {
             goingRight = false;
+            //print("Going  left = false");
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            goingUp = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            goingUp = false;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            goingRight = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            goingRight = false;
-        }
+
+        print(goingUp);
+
         if (goingUp || goingRight)
         {
+            print("Should move");
             bodyTransform.rotation = Quaternion.LookRotation(moveDir * Time.deltaTime * speed);
         }
+        
+        //print("Going up: " + goingUp + ", Going Right:" + goingRight);
     }
 
 

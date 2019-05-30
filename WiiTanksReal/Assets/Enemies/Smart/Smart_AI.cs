@@ -131,7 +131,6 @@ public class Smart_AI : AIParent
                             {
                                 if (Vector3.Distance(hit.point, player.transform.position) < minDist)
                                 {
-                                    print("draw line");
 
                                     angle = dir;
                                     smoothTurret = 0;
