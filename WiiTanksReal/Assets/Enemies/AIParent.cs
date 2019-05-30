@@ -89,6 +89,10 @@ public abstract class AIParent : MonoBehaviour, Damageable
         {
 
             Debug.DrawLine(transform.position, hit.point, Color.red);
+            if (hit.collider.gameObject.tag.Equals("Tank"))
+            {
+                return false;
+            }
             if (hit.collider.gameObject.tag.Equals("Player"))
             {
                 return true;
