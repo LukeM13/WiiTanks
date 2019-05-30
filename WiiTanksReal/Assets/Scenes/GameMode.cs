@@ -62,6 +62,7 @@ public class GameMode : MonoBehaviour
         if (currentLevel >= gameScenes.Count)
         {
             SceneManager.LoadScene(gameOverScene);
+            return;
         }
         SceneManager.LoadScene(transitionScene);
     }

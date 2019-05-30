@@ -108,4 +108,4 @@ MonoBehaviour:
     numberOfTanks: 3
   bullets: []
   numUnlockedBullets: 1
-  currentLevel: 19
+  currentLevel: -1
