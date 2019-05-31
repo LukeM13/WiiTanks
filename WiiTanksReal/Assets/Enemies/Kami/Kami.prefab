@@ -154,6 +154,7 @@ MonoBehaviour:
   health: 1
   explosion: {fileID: 6840018327403222325, guid: fd735288639019848a9bfb3767741811,
     type: 3}
+  minDist: 5
 --- !u!54 &3536010098071916634
 Rigidbody:
   m_ObjectHideFlags: 0

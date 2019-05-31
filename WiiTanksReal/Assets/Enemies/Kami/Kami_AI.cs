@@ -8,13 +8,18 @@ public class Kami_AI : AIParent
 
     public Object explosion;
 
+    public float minDist;
+
 
     // Update is called once per frame
     void Update()
     {
 
         navAgent.SetDestination(getClosestPlayer().transform.position);
-
+        if (Vector3.Distance(transform.position, getClosestPlayer().transform.position) < minDist)
+        {
+            death();
+        }
     }
 
     private void OnCollisionEnter(Collision other)
